@@ -62,10 +62,6 @@ promote: ## Promote files to the source directory
 _generated:
 	rm -rf _generated; mkdir _generated
 
-.PHONY: support
-support:
-	odoc support-files -o _generated/html
-
 .PHONY: prep
 prep: _generated
 	cd _generated; opam exec -- dune exec -- voodoo-prep
