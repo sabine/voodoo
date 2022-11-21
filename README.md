@@ -73,14 +73,14 @@ In this case, we need to run `voodoo-do -p ocaml-base-compiler -b` first.
 Note that when being used in this mode, the `-b` (blessed) switch should
 always be passed to `voodoo-do`.
 
-At this point, to view the output, use `odoc` to generate the support files:
+At this point, to view the output, use `odoc` to generate the support files (mostly: copying `highlight.js` from https://highlightjs.org and `odoc.css`):
 
 ```bash
 $ cd ..
 $ odoc support-files -o _generated/html
 ```
 
-and load the package index in your browser (adjust version from your current switch):
+and load the package index in your browser (adjust `x.y.z` according to the current switch):
 
 ```bash
 $ open _generated/html/p/ocaml-base-compiler/4.14.0/doc/index.html
@@ -101,19 +101,6 @@ And serve it with:
 ```bash
 $ opam install dream-serve
 $ dream-serve _generated/html
-```
-
-Load the package index in your browser (adjust version from your current switch):
-
-```bash
-$ open http://localhost:8080/p/ocaml-base-compiler/4.14.0/doc/index.html
-```
-
-You may use the `.DEFAULT` target from the `Makefile` to generate additional
-documentation:
-
-```
-make odoc
 ```
 
 Load the package index in your browser (adjust `x.y.z` according to the current switch):
