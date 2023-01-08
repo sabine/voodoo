@@ -1,4 +1,4 @@
-Generate the ppx_deriving_yaml documentation
+Generate the OCaml compiler libs documentation
 
   $ voodoo-prep
   Warning: No universes have been specified: will generate dummy universes
@@ -3705,477 +3705,3675 @@ Generate the ppx_deriving_yaml documentation
   /home/sabine-tarides/voodoo/_opam/doc/astring/README.md -> prep/universes/0/astring/0.8.5/doc/astring/README.md
   /home/sabine-tarides/voodoo/_opam/doc/astring/LICENSE.md -> prep/universes/0/astring/0.8.5/doc/astring/LICENSE.md
   /home/sabine-tarides/voodoo/_opam/doc/astring/CHANGES.md -> prep/universes/0/astring/0.8.5/doc/astring/CHANGES.md
-  $ voodoo-do -p ppx_deriving_yaml -b
-  Got dune
-  Found 0 mld pages and 3 other pages
-  libraries: [ppx_deriving_yaml]
+  $ ls
+  prep
+  $ voodoo-do -p ocaml-base-compiler -b
+  No dune: Missing
+  Found no other pages
+  libraries: [runtime_events,threads,dynlink,str,ocamloptcomp,ocamlcommon,ocamltoplevel,ocamlmiddleend,ocamlbytecomp,odoc_info,unix,stdlib]
   compile command: odoc compile ./p.mld -o compile/page-p.odoc --child
-                     page-"ppx_deriving_yaml"
-  compile command: odoc compile ./ppx_deriving_yaml.mld -o
-                     compile/p/page-ppx_deriving_yaml.odoc --parent "p" -I
-                     compile --child page-"0.2.1"
-  File "./ppx_deriving_yaml.mld", line 2, characters 16-17:
+                     page-"ocaml-base-compiler"
+  File "./p.mld", line 2, characters 12-31:
+  Warning: Unknown reference qualifier 'ocaml-base'.
+  compile command: odoc compile ./ocaml-base-compiler.mld -o
+                     compile/p/page-ocaml-base-compiler.odoc --parent "p" -I
+                     compile --child page-"5.0.0"
+  File "./ocaml-base-compiler.mld", line 2, characters 16-17:
   Warning: Child label is not allowed in the last component of a reference path.
-  Suggestion: 'child-1' should be first.
-  compile command: odoc compile ./0.2.1.mld -o
-                     compile/p/ppx_deriving_yaml/page-0.2.1.odoc --parent
-                     "ppx_deriving_yaml" -I compile/p --child page-"doc"
+  Suggestion: 'child-0' should be first.
+  compile command: odoc compile ./5.0.0.mld -o
+                     compile/p/ocaml-base-compiler/page-5.0.0.odoc --parent
+                     "ocaml-base-compiler" -I compile/p --child page-"doc"
   compile command: odoc compile ./doc.mld -o
-                     compile/p/ppx_deriving_yaml/0.2.1/page-doc.odoc --parent
-                     "0.2.1" -I compile/p/ppx_deriving_yaml --child
-                     module-ppx_deriving_yaml__ --child
-                     module-ppx_deriving_yaml__Value --child
-                     module-ppx_deriving_yaml__Attrs --child
-                     module-ppx_deriving_yaml__Helpers --child
-                     module-ppx_deriving_yaml
+                     compile/p/ocaml-base-compiler/5.0.0/page-doc.odoc --parent
+                     "5.0.0" -I compile/p/ocaml-base-compiler --child
+                     module-stdlib__Buffer --child module-stdlib__Condition
+                     --child module-stdlib__Stack --child
+                     module-stdlib__StringLabels --child module-std_exit
+                     --child module-stdlib__Nativeint --child
+                     module-stdlib__Lexing --child module-stdlib__Result
+                     --child module-stdlib__Domain --child module-stdlib__Scanf
+                     --child module-stdlib__BytesLabels --child
+                     module-stdlib__Bigarray --child module-stdlib__In_channel
+                     --child module-stdlib__List --child module-stdlib__Mutex
+                     --child module-stdlib__Obj --child
+                     module-camlinternalFormat --child
+                     module-stdlib__ArrayLabels --child module-stdlib__Callback
+                     --child module-stdlib__Either --child
+                     module-stdlib__Random --child
+                     module-camlinternalFormatBasics --child
+                     module-stdlib__Printexc --child module-stdlib__Set --child
+                     module-stdlib__Printf --child module-camlinternalMod
+                     --child module-stdlib__Marshal --child
+                     module-stdlib__Uchar --child module-stdlib__Semaphore
+                     --child module-stdlib__Bool --child module-stdlib__Queue
+                     --child module-stdlib__String --child
+                     module-camlinternalLazy --child module-stdlib__Float
+                     --child module-stdlib__Ephemeron --child
+                     module-stdlib__Out_channel --child module-stdlib__Fun
+                     --child module-stdlib__Seq --child
+                     module-stdlib__MoreLabels --child module-stdlib__Gc
+                     --child module-stdlib__Complex --child module-stdlib__Arg
+                     --child module-stdlib__Effect --child module-stdlib__Int32
+                     --child module-stdlib__Atomic --child
+                     module-stdlib__Filename --child module-camlinternalOO
+                     --child module-stdlib__Oo --child module-stdlib__StdLabels
+                     --child module-stdlib__Weak --child module-stdlib__Digest
+                     --child module-stdlib__Map --child module-stdlib --child
+                     module-stdlib__Parsing --child module-stdlib__Bytes
+                     --child module-stdlib__Int --child module-stdlib__Option
+                     --child module-stdlib__Format --child module-stdlib__Sys
+                     --child module-stdlib__ListLabels --child
+                     module-stdlib__Int64 --child module-stdlib__Hashtbl
+                     --child module-stdlib__Unit --child module-stdlib__Array
+                     --child module-stdlib__Lazy --child module-stdlib__Char
+                     --child module-unix --child module-unixLabels --child
+                     module-odoc_gen --child module-odoc_sig --child
+                     module-odoc_exception --child module-odoc_class --child
+                     module-odoc_global --child module-odoc_parser --child
+                     module-odoc_analyse --child module-odoc_comments_global
+                     --child module-odoc_man --child module-odoc_to_text
+                     --child module-odoc_test --child module-odoc_dot --child
+                     module-odoc_lexer --child module-odoc_inherit --child
+                     module-odoc_ast --child module-odoc_ocamlhtml --child
+                     module-odoc_text_lexer --child module-odoc_latex_style
+                     --child module-odoc_text_parser --child
+                     module-odoc_messages --child module-odoc_env --child
+                     module-odoc_see_lexer --child module-odoc_control --child
+                     module-odoc_search --child module-odoc_comments --child
+                     module-odoc_texi --child module-odoc_text --child
+                     module-odoc_dag2html --child module-odoc_scan --child
+                     module-odoc_info --child module-odoc_module --child
+                     module-odoc_parameter --child module-odoc --child
+                     module-odoc_types --child module-odoc_str --child
+                     module-odoc_latex --child module-odoc_dep --child
+                     module-odoc_extension --child module-odoc_config --child
+                     module-odoc_type --child module-odoc_name --child
+                     module-odoc_merge --child module-odoc_value --child
+                     module-odoc_print --child module-odoc_html --child
+                     module-odoc_args --child module-odoc_misc --child
+                     module-odoc_cross --child module-dataflow --child
+                     module-expunge --child module-closure_element --child
+                     module-printpat --child module-includecore --child
+                     module-identifiable --child module-CSE --child
+                     module-printtyped --child module-simple_value_approx
+                     --child module-rec_check --child module-terminfo --child
+                     module-mutable_variable --child module-linearize --child
+                     module-reg --child module-type_immediacy --child
+                     module-x86_ast --child module-mach --child
+                     module-set_of_closures_id --child module-errortrace
+                     --child module-location --child module-export_info --child
+                     module-opterrors --child module-polling --child
+                     module-interval --child module-datarepr --child
+                     module-reload --child module-ref_to_variables --child
+                     module-bytelink --child module-cmmgen_state --child
+                     module-binutils --child module-typedecl_separability
+                     --child module-lift_constants --child
+                     module-inline_and_simplify --child module-config_boot
+                     --child module-compilation_unit --child
+                     module-flambda_utils --child module-parameter --child
+                     module-cmm_helpers --child module-printlambda --child
+                     module-parser --child module-closure --child
+                     module-simplify_boxed_integer_ops_intf --child
+                     module-ast_helper --child module-flambda_invariants
+                     --child module-interf --child module-arch --child
+                     module-closure_id --child module-printclambda --child
+                     module-genprintval --child module-x86_dsl --child
+                     module-typedecl --child module-branch_relaxation_intf
+                     --child module-cmmgen --child module-pprintast --child
+                     module-annot --child module-debuginfo --child
+                     module-printcmm --child module-optmain --child
+                     module-shape --child module-CSEgen --child module-x86_masm
+                     --child module-linscan --child module-x86_gas --child
+                     module-typetexp --child module-tmc --child
+                     module-export_info_for_pack --child module-emitcode
+                     --child module-warnings --child
+                     module-internal_variable_names --child module-comballoc
+                     --child module-simplify_boxed_integer_ops --child
+                     module-cmt2annot --child module-id_types --child
+                     module-translmod --child module-simplif --child
+                     module-lambda --child module-envaux --child
+                     module-cmx_format --child module-asmgen --child
+                     module-cmxs_format --child module-typedecl_properties
+                     --child module-docstrings --child module-translprim
+                     --child module-emit --child module-maindriver --child
+                     module-scheduling --child module-meta --child
+                     module-diffing_with_keys --child module-emitaux --child
+                     module-inlining_stats --child module-typedecl_immediacy
+                     --child module-btype --child module-main --child
+                     module-build_path_prefix_map --child module-topmain
+                     --child module-trace --child module-instruct --child
+                     module-persistent_env --child module-asttypes --child
+                     module-flambda --child module-clambda_primitives --child
+                     module-static_exception --child module-translobj --child
+                     module-syntaxerr --child module-domainstate --child
+                     module-asmlibrarian --child module-compenv --child
+                     module-int_replace_polymorphic_compare --child
+                     module-untypeast --child
+                     module-lift_let_to_initialize_symbol --child
+                     module-cmo_format --child module-spill --child
+                     module-attr_helper --child
+                     module-strongly_connected_components --child
+                     module-inline_and_simplify_aux --child
+                     module-invariant_params --child module-local_store --child
+                     module-typeclass --child module-proc --child
+                     module-strmatch --child module-linear --child
+                     module-patterns --child module-backend_intf --child
+                     module-builtin_attributes --child module-primitive --child
+                     module-reloadgen --child module-flambda_to_clambda --child
+                     module-emitenv --child module-coloring --child
+                     module-inlining_decision --child module-misc --child
+                     module-ctype --child module-inlining_cost --child
+                     module-simplify_primitives --child module-includemod
+                     --child module-printlinear --child module-typemod --child
+                     module-ast_mapper --child module-includeclass --child
+                     module-tast_mapper --child module-translattribute --child
+                     module-asmlink --child module-cmi_format --child
+                     module-pass_wrapper --child module-closure_middle_end
+                     --child module-optmaindriver --child module-printast
+                     --child module-makedepend --child module-bytepackager
+                     --child module-find_recursive_functions --child
+                     module-remove_unused_program_constructs --child
+                     module-lift_code --child module-matching --child
+                     module-remove_free_vars_equal_to_args --child module-types
+                     --child module-typedecl_unboxed --child module-printmach
+                     --child module-dll --child module-allocated_const --child
+                     module-switch --child module-arg_helper --child
+                     module-parmatch --child module-build_export_info --child
+                     module-linkage_name --child module-selectgen --child
+                     module-cmm --child module-tophooks --child
+                     module-share_constants --child module-liveness --child
+                     module-ccomp --child module-mtype --child module-compile
+                     --child module-load_path --child module-typedtree --child
+                     module-targetint --child module-ast_iterator --child
+                     module-augment_specialised_args --child module-clambda
+                     --child module-optcompile --child module-consistbl --child
+                     module-topcommon --child module-compilenv --child
+                     module-remove_unused_closure_vars --child
+                     module-inconstant_idents --child module-printinstr --child
+                     module-toploop --child module-camlinternalMenhirLib
+                     --child module-config --child module-export_id --child
+                     module-compmisc --child module-effect_analysis --child
+                     module-inlining_stats_types --child module-outcometree
+                     --child module-traverse_for_exported_symbols --child
+                     module-ident --child module-stypes --child module-x86_proc
+                     --child module-closure_conversion_aux --child
+                     module-set_of_closures_origin --child module-parse --child
+                     module-cmm_invariants --child module-flambda_middle_end
+                     --child module-semantics_of_primitives --child
+                     module-topstart --child module-split --child module-subst
+                     --child module-closure_origin --child module-main_args
+                     --child module-config_main --child module-diffing --child
+                     module-typeopt --child module-simplify_common --child
+                     module-bytegen --child module-closure_conversion --child
+                     module-symtable --child module-variable --child
+                     module-profile --child module-longident --child
+                     module-cmt_format --child module-topeval --child
+                     module-convert_primitives --child module-typedecl_variance
+                     --child module-oprint --child module-opcodes --child
+                     module-projection --child module-unbox_closures --child
+                     module-lexer --child module-numbers --child module-errors
+                     --child module-branch_relaxation --child
+                     module-extract_projections --child module-pparse --child
+                     module-printtyp --child module-tag --child
+                     module-printclambda_primitives --child
+                     module-includemod_errorprinter --child
+                     module-lazy_backtrack --child module-linear_format --child
+                     module-ast_invariants --child
+                     module-initialize_symbol_to_let_symbol --child
+                     module-topdirs --child module-clflags --child
+                     module-tast_iterator --child module-compile_common --child
+                     module-env --child module-remove_unused_arguments --child
+                     module-alias_analysis --child module-backend_var --child
+                     module-inlining_decision_intf --child module-deadcode
+                     --child module-path --child module-schedgen --child
+                     module-bytelibrarian --child module-un_anf --child
+                     module-closure_offsets --child module-freshening --child
+                     module-translcore --child module-selection --child
+                     module-parsetree --child module-signature_group --child
+                     module-symbol --child module-import_approx --child
+                     module-bytesections --child module-flambda_iterators
+                     --child module-unbox_free_vars_of_closures --child
+                     module-inlining_transforms --child module-translclass
+                     --child module-unbox_specialised_args --child
+                     module-var_within_closure --child module-runtimedef
+                     --child module-asmpackager --child module-afl_instrument
+                     --child module-typecore --child module-depend --child
+                     module-predef --child module-str --child module-dynlink
+                     --child module-thread --child module-event --child
+                     module-profiling --child module-runtime_events --child
+                     module-ocamlmktop_init
+  File "./doc.mld", line 5, characters 15-40:
+  Warning: '{!modules ...}' should begin on its own line.
+  File "./doc.mld", line 8, characters 15-38:
+  Warning: '{!modules ...}' should begin on its own line.
+  File "./doc.mld", line 11, characters 15-105:
+  Warning: '{!modules ...}' should begin on its own line.
+  File "./doc.mld", line 14, characters 15-29:
+  Warning: '{!modules ...}' should begin on its own line.
+  File "./doc.mld", line 17, characters 15-1858:
+  Warning: '{!modules ...}' should begin on its own line.
+  File "./doc.mld", line 20, characters 15-1221:
+  Warning: '{!modules ...}' should begin on its own line.
+  File "./doc.mld", line 23, characters 15-85:
+  Warning: '{!modules ...}' should begin on its own line.
+  File "./doc.mld", line 26, characters 15-1381:
+  Warning: '{!modules ...}' should begin on its own line.
+  File "./doc.mld", line 29, characters 15-124:
+  Warning: '{!modules ...}' should begin on its own line.
+  File "./doc.mld", line 32, characters 15-448:
+  Warning: '{!modules ...}' should begin on its own line.
+  File "./doc.mld", line 35, characters 15-41:
+  Warning: '{!modules ...}' should begin on its own line.
+  File "./doc.mld", line 38, characters 15-124:
+  Warning: '{!modules ...}' should begin on its own line.
   compile command: odoc compile
-                     prep/universes/48/ppx_deriving_yaml/0.2.1/lib/ppx_deriving_yaml/ppx_deriving_yaml__.cmt
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/camlinternalFormatBasics.cmti
                      -o
-                     compile/p/ppx_deriving_yaml/0.2.1/0.2.1/lib/ppx_deriving_yaml/Ppx_deriving_yaml__.odoc
-                     --parent "doc" -I compile/p/ppx_deriving_yaml/0.2.1
-  Missing dependency: Astlib 90658f1797af1277c30c69c330d6bb64
-  Missing dependency: Astlib__ 8529cc06dbe8f25097db832c23258d2e
-  Missing dependency: Astlib__Ast_402 57edac28fb53a7d8ac6c12acea5f0ba9
-  Missing dependency: Astlib__Ast_403 257d49ea564d33ed7cf2843090df1b0b
-  Missing dependency: Astlib__Ast_404 80696cd192c79b2b0d0b19a3e04e314c
-  Missing dependency: Astlib__Ast_405 0a9481c55537907c60707483eed03ff6
-  Missing dependency: Astlib__Ast_406 e4b8a0d6d01cdd78df85afe0ec12ba64
-  Missing dependency: Astlib__Ast_407 692db1481f2c9cf8cdb3935a1b07dc65
-  Missing dependency: Astlib__Ast_408 f3d21228d47cf65418935f442a16b081
-  Missing dependency: Astlib__Ast_409 40ea351fa29e12337dff68e862e3dff7
-  Missing dependency: Astlib__Ast_410 7af3ae6f9833b486a3ac458a7f67ef99
-  Missing dependency: Astlib__Ast_411 0b2d2e081deb993002c8f75f3c55be06
-  Missing dependency: Astlib__Ast_412 0c1a066e66b3e6cfe48f28125a6e8d4d
-  Missing dependency: Astlib__Ast_413 db5254da5a8c60e03e4b7bdefe0d30d5
-  Missing dependency: Astlib__Ast_414 eba8aa3d1764c0c0f42a06a5f44f3663
-  Missing dependency: Astlib__Ast_500 95708acd0a14e3baf2516080c91cefe1
-  Missing dependency: Astlib__Location b3a642c5f486a00399bfa64e035e6185
-  Missing dependency: Astlib__Longident 8b605cca08297643b91aeed43bbdcca8
-  Missing dependency: Astlib__Parse 01f793e2a5c46e489684c5cc94ffaae7
-  Missing dependency: Asttypes 8e13c3e1e619d609f06d4cb969510b9f
-  Missing dependency: Build_path_prefix_map 6707300ead09f98da0d1118ecedeaa84
-  Missing dependency: CamlinternalFormatBasics cecfafd5c021473f5e358c96ac7502a0
-  Missing dependency: CamlinternalLazy 2c797917c31a980b79e9d16d84057b70
-  Missing dependency: Clflags 5e86cc480f089a8f4cd25e4692045ec1
-  Missing dependency: Cmi_format 37a0eaddfc453dfffd0d5d0c40c1905c
-  Missing dependency: Compmisc e0d55a71a450aef521b84cff11fa6f06
-  Missing dependency: Env 2545caf02c46d162f1307da4705adf6d
-  Missing dependency: Ident 51215e6391ba6c7232e809326eece57b
-  Missing dependency: Identifiable 85bd9a5ac9afff88896e3f793f976cd5
-  Missing dependency: Load_path a5e6ad168a3c17969b575d048d5c8d06
-  Missing dependency: Location 4bbcd6f7d16357931ebbfdbf9f5267c8
-  Missing dependency: Longident 0e755e8e24e8c8ac7f2ee4a4985076be
-  Missing dependency: Misc c160e2ac60e89d9c314767d73c2482ac
-  Missing dependency: Ocaml_common 0c37b028a7f44c942842627324144863
-  Missing dependency: Ocaml_shadow ecc8cd78656eeae0b3834d784a1876db
-  Missing dependency: Outcometree 2451f651b280a341dfd80bf3f712896b
-  Missing dependency: Parsetree 096f58e4312ad224f22d21960d40384d
-  Missing dependency: Path 909feea88de1b1f5f503b21a91822338
-  Missing dependency: Ppxlib f548fccc115e2b458a08427e5e99d0f0
-  Missing dependency: Ppxlib__ d8f6d0539b76e5819435be027910d8ed
-  Missing dependency: Ppxlib__Ast_pattern 51ee582e34c95f438c62b65b3a22cc1f
-  Missing dependency: Ppxlib__Ast_pattern0 59ac56151c04a0bb5af45e26eddf9366
-  Missing dependency: Ppxlib__Ast_pattern_generated e581e359cc11d048ff7b4f2caf5e9c3e
-  Missing dependency: Ppxlib__Ast_traverse 82453fbf00b15739cf27dfa242e3a6d2
-  Missing dependency: Ppxlib__Ast_traverse0 2c1129e62d22313d4eb26790e85e9fef
-  Missing dependency: Ppxlib__Attribute 56d0551bbff77a39e8c89f1970f04fb0
-  Missing dependency: Ppxlib__Code_path 780bc9c11970af3809381fc9073118c2
-  Missing dependency: Ppxlib__Common 0e24b1cf478e949a0c3dd0a4691e79b1
-  Missing dependency: Ppxlib__Expansion_context 4674f00e046d5d9592e0cf0d24c33d8b
-  Missing dependency: Ppxlib__Import f2f43f89bc25b95955c94fef002f3925
-  Missing dependency: Ppxlib__Loc a8d671d0f8d40e84d3c84c1d8b5998e7
-  Missing dependency: Ppxlib__Location 2b804a717a038c5439b5b34c8e476e47
-  Missing dependency: Ppxlib__Longident 8d79836df1295f1cff4c57e0afa429b9
-  Missing dependency: Ppxlib__Name c09143cd70519d75becab9fbb267c932
-  Missing dependency: Ppxlib__Utils e1f8c03e859fa531b444dd32706e47ec
-  Missing dependency: Ppxlib_ast 78f863d73c4233bacb9b7dcdfc403e9e
-  Missing dependency: Ppxlib_ast__ 8c3eb8e361ec4b030bcd7cb8ab0e48ae
-  Missing dependency: Ppxlib_ast__Ast 5debff47c4464193af5a86034ebb1fb2
-  Missing dependency: Ppxlib_ast__Import e7dc82a7ee09250ca43357b5061dde9e
-  Missing dependency: Ppxlib_ast__Versions 382e74672b0fbec198ec58ae9970fc29
-  Missing dependency: Ppxlib_traverse_builtins c0ac095fb9f6a04e437dde5da6be6641
-  Missing dependency: Primitive 0f9fa482c8cbc2feccc780e00f936c39
-  Missing dependency: Profile cd54d8773a52beceaf573a266914e0f5
-  Missing dependency: Sexplib0 7620587723f4ba1ddf955831eed59f5f
-  Missing dependency: Sexplib0__ 77157f5c26f3614a60f3ea091776516c
-  Missing dependency: Sexplib0__Sexp c186ea93704a1f1ec6c1bcaeecc5147f
-  Missing dependency: Sexplib0__Sexp_conv 714fe20ec8fb62046a840170c389de10
-  Missing dependency: Sexplib0__Sexp_conv_grammar e616e67c88cbde38eafbce64f03ead2d
-  Missing dependency: Sexplib0__Sexp_grammar c47fca4c7de1eaddd16225382bd4f02c
-  Missing dependency: Shape 082359f0c8c7b97545dbc23eab009e13
-  Missing dependency: Stdlib 85f85ddb47edc0c7579657eee740302d
-  Missing dependency: Stdlib__Arg 37ac8abf22d3dbe8e900dc221da3abf4
-  Missing dependency: Stdlib__Array 9bcf1a06bdcfbb976f898e818e15611a
-  Missing dependency: Stdlib__Buffer 12b944b4b2913751cd65bdc638975d4d
-  Missing dependency: Stdlib__Bytes b0d2a0027e7278e26a1fe4bc0e79a690
-  Missing dependency: Stdlib__BytesLabels 2430d84166b2487a527e5715a5b1642c
-  Missing dependency: Stdlib__Char 71d01c936f35204d25fbdc2a38153066
-  Missing dependency: Stdlib__Digest ff876226ab2584c79cfe1afd26ca2f58
-  Missing dependency: Stdlib__Domain a9e9c728d377f593667732dc026f2013
-  Missing dependency: Stdlib__Either b3ad0f8c65f28252059edebc03f68808
-  Missing dependency: Stdlib__Format e7385010d0d6a0bbd4191bc7546d458a
-  Missing dependency: Stdlib__Hashtbl bafdecabd3fce4f5ccc09a1a5587dab4
-  Missing dependency: Stdlib__Lazy ca3d5c326131437daef18ae34e7f4aa9
-  Missing dependency: Stdlib__Lexing be62854f0fbcd8531fe531cd00e34821
-  Missing dependency: Stdlib__List feb7c568830f9f239501efb83f4725e4
-  Missing dependency: Stdlib__ListLabels b531f5d32f73cc39d609456e75b4b131
-  Missing dependency: Stdlib__Map 71415964978d1cf0c1701af1137aa1ea
-  Missing dependency: Stdlib__Seq cc3f899885b746f777815dc93be7ede2
-  Missing dependency: Stdlib__Set f849884bcf48f894e90800c7ccd98f21
-  Missing dependency: Stdlib__StdLabels 8569b1ecaa952fff2a7ad8a3189c8ea8
-  Missing dependency: Stdlib__String facad7e0dada5941148738b8188d844f
-  Missing dependency: Stdlib__StringLabels 35aa2b633cde2c8857ed74e924def393
-  Missing dependency: Stdlib__Sys a0375c47cee9c7e20ff8f61d4f04e748
-  Missing dependency: Stdlib__Uchar 9ea864085095970c73b7b17c26c37317
-  Missing dependency: Stdppx 61387bcb55223b064672a50b91b780e7
-  Missing dependency: Subst 4f386f2a26e503086bc416b868de7373
-  Missing dependency: Type_immediacy 83945ea19313fcf2d732a672262d6fb1
-  Missing dependency: Types 415ec5f0b61e8e01c1fd8a230c310448
-  Missing dependency: Warnings 1c26f04813f661396abb13054a150814
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/CamlinternalFormatBasics.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0
   compile command: odoc compile
-                     prep/universes/48/ppx_deriving_yaml/0.2.1/lib/ppx_deriving_yaml/ppx_deriving_yaml__Attrs.cmti
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib.cmti
                      -o
-                     compile/p/ppx_deriving_yaml/0.2.1/0.2.1/lib/ppx_deriving_yaml/Ppx_deriving_yaml__Attrs.odoc
-                     --parent "doc" -I compile/p/ppx_deriving_yaml/0.2.1 -I
-                     compile/p/ppx_deriving_yaml/0.2.1/0.2.1/lib/ppx_deriving_yaml/
-  Missing dependency: Astlib 90658f1797af1277c30c69c330d6bb64
-  Missing dependency: Astlib__ 8529cc06dbe8f25097db832c23258d2e
-  Missing dependency: Astlib__Ast_402 57edac28fb53a7d8ac6c12acea5f0ba9
-  Missing dependency: Astlib__Ast_403 257d49ea564d33ed7cf2843090df1b0b
-  Missing dependency: Astlib__Ast_404 80696cd192c79b2b0d0b19a3e04e314c
-  Missing dependency: Astlib__Ast_405 0a9481c55537907c60707483eed03ff6
-  Missing dependency: Astlib__Ast_406 e4b8a0d6d01cdd78df85afe0ec12ba64
-  Missing dependency: Astlib__Ast_407 692db1481f2c9cf8cdb3935a1b07dc65
-  Missing dependency: Astlib__Ast_408 f3d21228d47cf65418935f442a16b081
-  Missing dependency: Astlib__Ast_409 40ea351fa29e12337dff68e862e3dff7
-  Missing dependency: Astlib__Ast_410 7af3ae6f9833b486a3ac458a7f67ef99
-  Missing dependency: Astlib__Ast_411 0b2d2e081deb993002c8f75f3c55be06
-  Missing dependency: Astlib__Ast_412 0c1a066e66b3e6cfe48f28125a6e8d4d
-  Missing dependency: Astlib__Ast_413 db5254da5a8c60e03e4b7bdefe0d30d5
-  Missing dependency: Astlib__Ast_414 eba8aa3d1764c0c0f42a06a5f44f3663
-  Missing dependency: Astlib__Ast_500 95708acd0a14e3baf2516080c91cefe1
-  Missing dependency: Astlib__Location b3a642c5f486a00399bfa64e035e6185
-  Missing dependency: Astlib__Longident 8b605cca08297643b91aeed43bbdcca8
-  Missing dependency: Astlib__Parse 01f793e2a5c46e489684c5cc94ffaae7
-  Missing dependency: Asttypes 8e13c3e1e619d609f06d4cb969510b9f
-  Missing dependency: Build_path_prefix_map 6707300ead09f98da0d1118ecedeaa84
-  Missing dependency: CamlinternalFormatBasics cecfafd5c021473f5e358c96ac7502a0
-  Missing dependency: CamlinternalLazy 2c797917c31a980b79e9d16d84057b70
-  Missing dependency: Clflags 5e86cc480f089a8f4cd25e4692045ec1
-  Missing dependency: Cmi_format 37a0eaddfc453dfffd0d5d0c40c1905c
-  Missing dependency: Compmisc e0d55a71a450aef521b84cff11fa6f06
-  Missing dependency: Env 2545caf02c46d162f1307da4705adf6d
-  Missing dependency: Ident 51215e6391ba6c7232e809326eece57b
-  Missing dependency: Identifiable 85bd9a5ac9afff88896e3f793f976cd5
-  Missing dependency: Load_path a5e6ad168a3c17969b575d048d5c8d06
-  Missing dependency: Location 4bbcd6f7d16357931ebbfdbf9f5267c8
-  Missing dependency: Longident 0e755e8e24e8c8ac7f2ee4a4985076be
-  Missing dependency: Misc c160e2ac60e89d9c314767d73c2482ac
-  Missing dependency: Ocaml_common 0c37b028a7f44c942842627324144863
-  Missing dependency: Ocaml_shadow ecc8cd78656eeae0b3834d784a1876db
-  Missing dependency: Outcometree 2451f651b280a341dfd80bf3f712896b
-  Missing dependency: Parsetree 096f58e4312ad224f22d21960d40384d
-  Missing dependency: Path 909feea88de1b1f5f503b21a91822338
-  Missing dependency: Ppxlib f548fccc115e2b458a08427e5e99d0f0
-  Missing dependency: Ppxlib__ d8f6d0539b76e5819435be027910d8ed
-  Missing dependency: Ppxlib__Ast_pattern 51ee582e34c95f438c62b65b3a22cc1f
-  Missing dependency: Ppxlib__Ast_pattern0 59ac56151c04a0bb5af45e26eddf9366
-  Missing dependency: Ppxlib__Ast_pattern_generated e581e359cc11d048ff7b4f2caf5e9c3e
-  Missing dependency: Ppxlib__Ast_traverse 82453fbf00b15739cf27dfa242e3a6d2
-  Missing dependency: Ppxlib__Ast_traverse0 2c1129e62d22313d4eb26790e85e9fef
-  Missing dependency: Ppxlib__Attribute 56d0551bbff77a39e8c89f1970f04fb0
-  Missing dependency: Ppxlib__Code_path 780bc9c11970af3809381fc9073118c2
-  Missing dependency: Ppxlib__Common 0e24b1cf478e949a0c3dd0a4691e79b1
-  Missing dependency: Ppxlib__Expansion_context 4674f00e046d5d9592e0cf0d24c33d8b
-  Missing dependency: Ppxlib__Import f2f43f89bc25b95955c94fef002f3925
-  Missing dependency: Ppxlib__Loc a8d671d0f8d40e84d3c84c1d8b5998e7
-  Missing dependency: Ppxlib__Location 2b804a717a038c5439b5b34c8e476e47
-  Missing dependency: Ppxlib__Longident 8d79836df1295f1cff4c57e0afa429b9
-  Missing dependency: Ppxlib__Name c09143cd70519d75becab9fbb267c932
-  Missing dependency: Ppxlib__Utils e1f8c03e859fa531b444dd32706e47ec
-  Missing dependency: Ppxlib_ast 78f863d73c4233bacb9b7dcdfc403e9e
-  Missing dependency: Ppxlib_ast__ 8c3eb8e361ec4b030bcd7cb8ab0e48ae
-  Missing dependency: Ppxlib_ast__Ast 5debff47c4464193af5a86034ebb1fb2
-  Missing dependency: Ppxlib_ast__Import e7dc82a7ee09250ca43357b5061dde9e
-  Missing dependency: Ppxlib_ast__Versions 382e74672b0fbec198ec58ae9970fc29
-  Missing dependency: Ppxlib_traverse_builtins c0ac095fb9f6a04e437dde5da6be6641
-  Missing dependency: Primitive 0f9fa482c8cbc2feccc780e00f936c39
-  Missing dependency: Profile cd54d8773a52beceaf573a266914e0f5
-  Missing dependency: Sexplib0 7620587723f4ba1ddf955831eed59f5f
-  Missing dependency: Sexplib0__ 77157f5c26f3614a60f3ea091776516c
-  Missing dependency: Sexplib0__Sexp c186ea93704a1f1ec6c1bcaeecc5147f
-  Missing dependency: Sexplib0__Sexp_conv 714fe20ec8fb62046a840170c389de10
-  Missing dependency: Sexplib0__Sexp_conv_grammar e616e67c88cbde38eafbce64f03ead2d
-  Missing dependency: Sexplib0__Sexp_grammar c47fca4c7de1eaddd16225382bd4f02c
-  Missing dependency: Shape 082359f0c8c7b97545dbc23eab009e13
-  Missing dependency: Stdlib 85f85ddb47edc0c7579657eee740302d
-  Missing dependency: Stdlib__Arg 37ac8abf22d3dbe8e900dc221da3abf4
-  Missing dependency: Stdlib__Array 9bcf1a06bdcfbb976f898e818e15611a
-  Missing dependency: Stdlib__Buffer 12b944b4b2913751cd65bdc638975d4d
-  Missing dependency: Stdlib__Bytes b0d2a0027e7278e26a1fe4bc0e79a690
-  Missing dependency: Stdlib__BytesLabels 2430d84166b2487a527e5715a5b1642c
-  Missing dependency: Stdlib__Char 71d01c936f35204d25fbdc2a38153066
-  Missing dependency: Stdlib__Digest ff876226ab2584c79cfe1afd26ca2f58
-  Missing dependency: Stdlib__Domain a9e9c728d377f593667732dc026f2013
-  Missing dependency: Stdlib__Either b3ad0f8c65f28252059edebc03f68808
-  Missing dependency: Stdlib__Format e7385010d0d6a0bbd4191bc7546d458a
-  Missing dependency: Stdlib__Hashtbl bafdecabd3fce4f5ccc09a1a5587dab4
-  Missing dependency: Stdlib__Lazy ca3d5c326131437daef18ae34e7f4aa9
-  Missing dependency: Stdlib__Lexing be62854f0fbcd8531fe531cd00e34821
-  Missing dependency: Stdlib__List feb7c568830f9f239501efb83f4725e4
-  Missing dependency: Stdlib__ListLabels b531f5d32f73cc39d609456e75b4b131
-  Missing dependency: Stdlib__Map 71415964978d1cf0c1701af1137aa1ea
-  Missing dependency: Stdlib__Seq cc3f899885b746f777815dc93be7ede2
-  Missing dependency: Stdlib__Set f849884bcf48f894e90800c7ccd98f21
-  Missing dependency: Stdlib__StdLabels 8569b1ecaa952fff2a7ad8a3189c8ea8
-  Missing dependency: Stdlib__String facad7e0dada5941148738b8188d844f
-  Missing dependency: Stdlib__StringLabels 35aa2b633cde2c8857ed74e924def393
-  Missing dependency: Stdlib__Sys a0375c47cee9c7e20ff8f61d4f04e748
-  Missing dependency: Stdlib__Uchar 9ea864085095970c73b7b17c26c37317
-  Missing dependency: Stdppx 61387bcb55223b064672a50b91b780e7
-  Missing dependency: Subst 4f386f2a26e503086bc416b868de7373
-  Missing dependency: Type_immediacy 83945ea19313fcf2d732a672262d6fb1
-  Missing dependency: Types 415ec5f0b61e8e01c1fd8a230c310448
-  Missing dependency: Warnings 1c26f04813f661396abb13054a150814
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
   compile command: odoc compile
-                     prep/universes/48/ppx_deriving_yaml/0.2.1/lib/ppx_deriving_yaml/ppx_deriving_yaml__Helpers.cmti
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/camlinternalLazy.cmti
                      -o
-                     compile/p/ppx_deriving_yaml/0.2.1/0.2.1/lib/ppx_deriving_yaml/Ppx_deriving_yaml__Helpers.odoc
-                     --parent "doc" -I compile/p/ppx_deriving_yaml/0.2.1 -I
-                     compile/p/ppx_deriving_yaml/0.2.1/0.2.1/lib/ppx_deriving_yaml/
-  Missing dependency: Astlib 90658f1797af1277c30c69c330d6bb64
-  Missing dependency: Astlib__ 8529cc06dbe8f25097db832c23258d2e
-  Missing dependency: Astlib__Ast_402 57edac28fb53a7d8ac6c12acea5f0ba9
-  Missing dependency: Astlib__Ast_403 257d49ea564d33ed7cf2843090df1b0b
-  Missing dependency: Astlib__Ast_404 80696cd192c79b2b0d0b19a3e04e314c
-  Missing dependency: Astlib__Ast_405 0a9481c55537907c60707483eed03ff6
-  Missing dependency: Astlib__Ast_406 e4b8a0d6d01cdd78df85afe0ec12ba64
-  Missing dependency: Astlib__Ast_407 692db1481f2c9cf8cdb3935a1b07dc65
-  Missing dependency: Astlib__Ast_408 f3d21228d47cf65418935f442a16b081
-  Missing dependency: Astlib__Ast_409 40ea351fa29e12337dff68e862e3dff7
-  Missing dependency: Astlib__Ast_410 7af3ae6f9833b486a3ac458a7f67ef99
-  Missing dependency: Astlib__Ast_411 0b2d2e081deb993002c8f75f3c55be06
-  Missing dependency: Astlib__Ast_412 0c1a066e66b3e6cfe48f28125a6e8d4d
-  Missing dependency: Astlib__Ast_413 db5254da5a8c60e03e4b7bdefe0d30d5
-  Missing dependency: Astlib__Ast_414 eba8aa3d1764c0c0f42a06a5f44f3663
-  Missing dependency: Astlib__Ast_500 95708acd0a14e3baf2516080c91cefe1
-  Missing dependency: Astlib__Location b3a642c5f486a00399bfa64e035e6185
-  Missing dependency: Astlib__Longident 8b605cca08297643b91aeed43bbdcca8
-  Missing dependency: Astlib__Parse 01f793e2a5c46e489684c5cc94ffaae7
-  Missing dependency: Asttypes 8e13c3e1e619d609f06d4cb969510b9f
-  Missing dependency: Build_path_prefix_map 6707300ead09f98da0d1118ecedeaa84
-  Missing dependency: CamlinternalFormatBasics cecfafd5c021473f5e358c96ac7502a0
-  Missing dependency: CamlinternalLazy 2c797917c31a980b79e9d16d84057b70
-  Missing dependency: Clflags 5e86cc480f089a8f4cd25e4692045ec1
-  Missing dependency: Cmi_format 37a0eaddfc453dfffd0d5d0c40c1905c
-  Missing dependency: Compmisc e0d55a71a450aef521b84cff11fa6f06
-  Missing dependency: Env 2545caf02c46d162f1307da4705adf6d
-  Missing dependency: Ident 51215e6391ba6c7232e809326eece57b
-  Missing dependency: Identifiable 85bd9a5ac9afff88896e3f793f976cd5
-  Missing dependency: Load_path a5e6ad168a3c17969b575d048d5c8d06
-  Missing dependency: Location 4bbcd6f7d16357931ebbfdbf9f5267c8
-  Missing dependency: Longident 0e755e8e24e8c8ac7f2ee4a4985076be
-  Missing dependency: Misc c160e2ac60e89d9c314767d73c2482ac
-  Missing dependency: Ocaml_common 0c37b028a7f44c942842627324144863
-  Missing dependency: Ocaml_shadow ecc8cd78656eeae0b3834d784a1876db
-  Missing dependency: Outcometree 2451f651b280a341dfd80bf3f712896b
-  Missing dependency: Parsetree 096f58e4312ad224f22d21960d40384d
-  Missing dependency: Path 909feea88de1b1f5f503b21a91822338
-  Missing dependency: Ppxlib f548fccc115e2b458a08427e5e99d0f0
-  Missing dependency: Ppxlib__ d8f6d0539b76e5819435be027910d8ed
-  Missing dependency: Ppxlib__Ast_pattern 51ee582e34c95f438c62b65b3a22cc1f
-  Missing dependency: Ppxlib__Ast_pattern0 59ac56151c04a0bb5af45e26eddf9366
-  Missing dependency: Ppxlib__Ast_pattern_generated e581e359cc11d048ff7b4f2caf5e9c3e
-  Missing dependency: Ppxlib__Ast_traverse 82453fbf00b15739cf27dfa242e3a6d2
-  Missing dependency: Ppxlib__Ast_traverse0 2c1129e62d22313d4eb26790e85e9fef
-  Missing dependency: Ppxlib__Attribute 56d0551bbff77a39e8c89f1970f04fb0
-  Missing dependency: Ppxlib__Code_path 780bc9c11970af3809381fc9073118c2
-  Missing dependency: Ppxlib__Common 0e24b1cf478e949a0c3dd0a4691e79b1
-  Missing dependency: Ppxlib__Expansion_context 4674f00e046d5d9592e0cf0d24c33d8b
-  Missing dependency: Ppxlib__Import f2f43f89bc25b95955c94fef002f3925
-  Missing dependency: Ppxlib__Loc a8d671d0f8d40e84d3c84c1d8b5998e7
-  Missing dependency: Ppxlib__Location 2b804a717a038c5439b5b34c8e476e47
-  Missing dependency: Ppxlib__Longident 8d79836df1295f1cff4c57e0afa429b9
-  Missing dependency: Ppxlib__Name c09143cd70519d75becab9fbb267c932
-  Missing dependency: Ppxlib__Utils e1f8c03e859fa531b444dd32706e47ec
-  Missing dependency: Ppxlib_ast 78f863d73c4233bacb9b7dcdfc403e9e
-  Missing dependency: Ppxlib_ast__ 8c3eb8e361ec4b030bcd7cb8ab0e48ae
-  Missing dependency: Ppxlib_ast__Ast 5debff47c4464193af5a86034ebb1fb2
-  Missing dependency: Ppxlib_ast__Import e7dc82a7ee09250ca43357b5061dde9e
-  Missing dependency: Ppxlib_ast__Versions 382e74672b0fbec198ec58ae9970fc29
-  Missing dependency: Ppxlib_traverse_builtins c0ac095fb9f6a04e437dde5da6be6641
-  Missing dependency: Primitive 0f9fa482c8cbc2feccc780e00f936c39
-  Missing dependency: Profile cd54d8773a52beceaf573a266914e0f5
-  Missing dependency: Sexplib0 7620587723f4ba1ddf955831eed59f5f
-  Missing dependency: Sexplib0__ 77157f5c26f3614a60f3ea091776516c
-  Missing dependency: Sexplib0__Sexp c186ea93704a1f1ec6c1bcaeecc5147f
-  Missing dependency: Sexplib0__Sexp_conv 714fe20ec8fb62046a840170c389de10
-  Missing dependency: Sexplib0__Sexp_conv_grammar e616e67c88cbde38eafbce64f03ead2d
-  Missing dependency: Sexplib0__Sexp_grammar c47fca4c7de1eaddd16225382bd4f02c
-  Missing dependency: Shape 082359f0c8c7b97545dbc23eab009e13
-  Missing dependency: Stdlib 85f85ddb47edc0c7579657eee740302d
-  Missing dependency: Stdlib__Arg 37ac8abf22d3dbe8e900dc221da3abf4
-  Missing dependency: Stdlib__Array 9bcf1a06bdcfbb976f898e818e15611a
-  Missing dependency: Stdlib__Buffer 12b944b4b2913751cd65bdc638975d4d
-  Missing dependency: Stdlib__Bytes b0d2a0027e7278e26a1fe4bc0e79a690
-  Missing dependency: Stdlib__BytesLabels 2430d84166b2487a527e5715a5b1642c
-  Missing dependency: Stdlib__Char 71d01c936f35204d25fbdc2a38153066
-  Missing dependency: Stdlib__Digest ff876226ab2584c79cfe1afd26ca2f58
-  Missing dependency: Stdlib__Domain a9e9c728d377f593667732dc026f2013
-  Missing dependency: Stdlib__Either b3ad0f8c65f28252059edebc03f68808
-  Missing dependency: Stdlib__Format e7385010d0d6a0bbd4191bc7546d458a
-  Missing dependency: Stdlib__Hashtbl bafdecabd3fce4f5ccc09a1a5587dab4
-  Missing dependency: Stdlib__Lazy ca3d5c326131437daef18ae34e7f4aa9
-  Missing dependency: Stdlib__Lexing be62854f0fbcd8531fe531cd00e34821
-  Missing dependency: Stdlib__List feb7c568830f9f239501efb83f4725e4
-  Missing dependency: Stdlib__ListLabels b531f5d32f73cc39d609456e75b4b131
-  Missing dependency: Stdlib__Map 71415964978d1cf0c1701af1137aa1ea
-  Missing dependency: Stdlib__Seq cc3f899885b746f777815dc93be7ede2
-  Missing dependency: Stdlib__Set f849884bcf48f894e90800c7ccd98f21
-  Missing dependency: Stdlib__StdLabels 8569b1ecaa952fff2a7ad8a3189c8ea8
-  Missing dependency: Stdlib__String facad7e0dada5941148738b8188d844f
-  Missing dependency: Stdlib__StringLabels 35aa2b633cde2c8857ed74e924def393
-  Missing dependency: Stdlib__Sys a0375c47cee9c7e20ff8f61d4f04e748
-  Missing dependency: Stdlib__Uchar 9ea864085095970c73b7b17c26c37317
-  Missing dependency: Stdppx 61387bcb55223b064672a50b91b780e7
-  Missing dependency: Subst 4f386f2a26e503086bc416b868de7373
-  Missing dependency: Type_immediacy 83945ea19313fcf2d732a672262d6fb1
-  Missing dependency: Types 415ec5f0b61e8e01c1fd8a230c310448
-  Missing dependency: Warnings 1c26f04813f661396abb13054a150814
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/CamlinternalLazy.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
   compile command: odoc compile
-                     prep/universes/48/ppx_deriving_yaml/0.2.1/lib/ppx_deriving_yaml/ppx_deriving_yaml__Value.cmti
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__Either.cmti
                      -o
-                     compile/p/ppx_deriving_yaml/0.2.1/0.2.1/lib/ppx_deriving_yaml/Ppx_deriving_yaml__Value.odoc
-                     --parent "doc" -I compile/p/ppx_deriving_yaml/0.2.1 -I
-                     compile/p/ppx_deriving_yaml/0.2.1/0.2.1/lib/ppx_deriving_yaml/
-  Missing dependency: Warnings 1c26f04813f661396abb13054a150814
-  Missing dependency: Types 415ec5f0b61e8e01c1fd8a230c310448
-  Missing dependency: Type_immediacy 83945ea19313fcf2d732a672262d6fb1
-  Missing dependency: Subst 4f386f2a26e503086bc416b868de7373
-  Missing dependency: Stdppx 61387bcb55223b064672a50b91b780e7
-  Missing dependency: Stdlib__Uchar 9ea864085095970c73b7b17c26c37317
-  Missing dependency: Stdlib__Sys a0375c47cee9c7e20ff8f61d4f04e748
-  Missing dependency: Stdlib__StringLabels 35aa2b633cde2c8857ed74e924def393
-  Missing dependency: Stdlib__String facad7e0dada5941148738b8188d844f
-  Missing dependency: Stdlib__StdLabels 8569b1ecaa952fff2a7ad8a3189c8ea8
-  Missing dependency: Stdlib__Set f849884bcf48f894e90800c7ccd98f21
-  Missing dependency: Stdlib__Seq cc3f899885b746f777815dc93be7ede2
-  Missing dependency: Stdlib__Option 26fe71351d86ebe5d69a94600294de33
-  Missing dependency: Stdlib__Map 71415964978d1cf0c1701af1137aa1ea
-  Missing dependency: Stdlib__ListLabels b531f5d32f73cc39d609456e75b4b131
-  Missing dependency: Stdlib__List feb7c568830f9f239501efb83f4725e4
-  Missing dependency: Stdlib__Lexing be62854f0fbcd8531fe531cd00e34821
-  Missing dependency: Stdlib__Lazy ca3d5c326131437daef18ae34e7f4aa9
-  Missing dependency: Stdlib__Hashtbl bafdecabd3fce4f5ccc09a1a5587dab4
-  Missing dependency: Stdlib__Format e7385010d0d6a0bbd4191bc7546d458a
-  Missing dependency: Stdlib__Either b3ad0f8c65f28252059edebc03f68808
-  Missing dependency: Stdlib__Domain a9e9c728d377f593667732dc026f2013
-  Missing dependency: Stdlib__Digest ff876226ab2584c79cfe1afd26ca2f58
-  Missing dependency: Stdlib__Char 71d01c936f35204d25fbdc2a38153066
-  Missing dependency: Stdlib__BytesLabels 2430d84166b2487a527e5715a5b1642c
-  Missing dependency: Stdlib__Bytes b0d2a0027e7278e26a1fe4bc0e79a690
-  Missing dependency: Stdlib__Buffer 12b944b4b2913751cd65bdc638975d4d
-  Missing dependency: Stdlib__Array 9bcf1a06bdcfbb976f898e818e15611a
-  Missing dependency: Stdlib__Arg 37ac8abf22d3dbe8e900dc221da3abf4
-  Missing dependency: Stdlib 85f85ddb47edc0c7579657eee740302d
-  Missing dependency: Shape 082359f0c8c7b97545dbc23eab009e13
-  Missing dependency: Sexplib0__Sexp_grammar c47fca4c7de1eaddd16225382bd4f02c
-  Missing dependency: Sexplib0__Sexp_conv_grammar e616e67c88cbde38eafbce64f03ead2d
-  Missing dependency: Sexplib0__Sexp_conv 714fe20ec8fb62046a840170c389de10
-  Missing dependency: Sexplib0__Sexp c186ea93704a1f1ec6c1bcaeecc5147f
-  Missing dependency: Sexplib0__ 77157f5c26f3614a60f3ea091776516c
-  Missing dependency: Sexplib0 7620587723f4ba1ddf955831eed59f5f
-  Missing dependency: Profile cd54d8773a52beceaf573a266914e0f5
-  Missing dependency: Primitive 0f9fa482c8cbc2feccc780e00f936c39
-  Missing dependency: Ppxlib_traverse_builtins c0ac095fb9f6a04e437dde5da6be6641
-  Missing dependency: Ppxlib_ast__Versions 382e74672b0fbec198ec58ae9970fc29
-  Missing dependency: Ppxlib_ast__Import e7dc82a7ee09250ca43357b5061dde9e
-  Missing dependency: Ppxlib_ast__Ast_helper_lite bbb1f5ec1f21d048d463916a929f7a3f
-  Missing dependency: Ppxlib_ast__Ast 5debff47c4464193af5a86034ebb1fb2
-  Missing dependency: Ppxlib_ast__ 8c3eb8e361ec4b030bcd7cb8ab0e48ae
-  Missing dependency: Ppxlib_ast 78f863d73c4233bacb9b7dcdfc403e9e
-  Missing dependency: Ppxlib__Utils e1f8c03e859fa531b444dd32706e47ec
-  Missing dependency: Ppxlib__Name c09143cd70519d75becab9fbb267c932
-  Missing dependency: Ppxlib__Longident 8d79836df1295f1cff4c57e0afa429b9
-  Missing dependency: Ppxlib__Location 2b804a717a038c5439b5b34c8e476e47
-  Missing dependency: Ppxlib__Loc a8d671d0f8d40e84d3c84c1d8b5998e7
-  Missing dependency: Ppxlib__Import f2f43f89bc25b95955c94fef002f3925
-  Missing dependency: Ppxlib__Expansion_context 4674f00e046d5d9592e0cf0d24c33d8b
-  Missing dependency: Ppxlib__Deriving 3b8afc01635fbb8198ae0fb5113418c4
-  Missing dependency: Ppxlib__Common 0e24b1cf478e949a0c3dd0a4691e79b1
-  Missing dependency: Ppxlib__Code_path 780bc9c11970af3809381fc9073118c2
-  Missing dependency: Ppxlib__Attribute 56d0551bbff77a39e8c89f1970f04fb0
-  Missing dependency: Ppxlib__Ast_traverse0 2c1129e62d22313d4eb26790e85e9fef
-  Missing dependency: Ppxlib__Ast_traverse 82453fbf00b15739cf27dfa242e3a6d2
-  Missing dependency: Ppxlib__Ast_pattern_generated e581e359cc11d048ff7b4f2caf5e9c3e
-  Missing dependency: Ppxlib__Ast_pattern0 59ac56151c04a0bb5af45e26eddf9366
-  Missing dependency: Ppxlib__Ast_pattern 51ee582e34c95f438c62b65b3a22cc1f
-  Missing dependency: Ppxlib__Ast_builder_intf 878b50249652bd2cf2a60dac0ff2a62a
-  Missing dependency: Ppxlib__Ast_builder_generated e467c12e285f5b7ae5b6fb7d8c21f6b3
-  Missing dependency: Ppxlib__Ast_builder 10dd132e059c7a732dd923aa3cd7daf8
-  Missing dependency: Ppxlib__ d8f6d0539b76e5819435be027910d8ed
-  Missing dependency: Ppxlib f548fccc115e2b458a08427e5e99d0f0
-  Missing dependency: Path 909feea88de1b1f5f503b21a91822338
-  Missing dependency: Parsetree 096f58e4312ad224f22d21960d40384d
-  Missing dependency: Outcometree 2451f651b280a341dfd80bf3f712896b
-  Missing dependency: Ocaml_shadow ecc8cd78656eeae0b3834d784a1876db
-  Missing dependency: Ocaml_common 0c37b028a7f44c942842627324144863
-  Missing dependency: Misc c160e2ac60e89d9c314767d73c2482ac
-  Missing dependency: Longident 0e755e8e24e8c8ac7f2ee4a4985076be
-  Missing dependency: Location 4bbcd6f7d16357931ebbfdbf9f5267c8
-  Missing dependency: Load_path a5e6ad168a3c17969b575d048d5c8d06
-  Missing dependency: Identifiable 85bd9a5ac9afff88896e3f793f976cd5
-  Missing dependency: Ident 51215e6391ba6c7232e809326eece57b
-  Missing dependency: Env 2545caf02c46d162f1307da4705adf6d
-  Missing dependency: Compmisc e0d55a71a450aef521b84cff11fa6f06
-  Missing dependency: Cmi_format 37a0eaddfc453dfffd0d5d0c40c1905c
-  Missing dependency: Clflags 5e86cc480f089a8f4cd25e4692045ec1
-  Missing dependency: CamlinternalLazy 2c797917c31a980b79e9d16d84057b70
-  Missing dependency: CamlinternalFormatBasics cecfafd5c021473f5e358c96ac7502a0
-  Missing dependency: Build_path_prefix_map 6707300ead09f98da0d1118ecedeaa84
-  Missing dependency: Asttypes 8e13c3e1e619d609f06d4cb969510b9f
-  Missing dependency: Astlib__Parse 01f793e2a5c46e489684c5cc94ffaae7
-  Missing dependency: Astlib__Longident 8b605cca08297643b91aeed43bbdcca8
-  Missing dependency: Astlib__Location b3a642c5f486a00399bfa64e035e6185
-  Missing dependency: Astlib__Ast_500 95708acd0a14e3baf2516080c91cefe1
-  Missing dependency: Astlib__Ast_414 eba8aa3d1764c0c0f42a06a5f44f3663
-  Missing dependency: Astlib__Ast_413 db5254da5a8c60e03e4b7bdefe0d30d5
-  Missing dependency: Astlib__Ast_412 0c1a066e66b3e6cfe48f28125a6e8d4d
-  Missing dependency: Astlib__Ast_411 0b2d2e081deb993002c8f75f3c55be06
-  Missing dependency: Astlib__Ast_410 7af3ae6f9833b486a3ac458a7f67ef99
-  Missing dependency: Astlib__Ast_409 40ea351fa29e12337dff68e862e3dff7
-  Missing dependency: Astlib__Ast_408 f3d21228d47cf65418935f442a16b081
-  Missing dependency: Astlib__Ast_407 692db1481f2c9cf8cdb3935a1b07dc65
-  Missing dependency: Astlib__Ast_406 e4b8a0d6d01cdd78df85afe0ec12ba64
-  Missing dependency: Astlib__Ast_405 0a9481c55537907c60707483eed03ff6
-  Missing dependency: Astlib__Ast_404 80696cd192c79b2b0d0b19a3e04e314c
-  Missing dependency: Astlib__Ast_403 257d49ea564d33ed7cf2843090df1b0b
-  Missing dependency: Astlib__Ast_402 57edac28fb53a7d8ac6c12acea5f0ba9
-  Missing dependency: Astlib__ 8529cc06dbe8f25097db832c23258d2e
-  Missing dependency: Astlib 90658f1797af1277c30c69c330d6bb64
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__Either.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
   compile command: odoc compile
-                     prep/universes/48/ppx_deriving_yaml/0.2.1/lib/ppx_deriving_yaml/ppx_deriving_yaml.cmt
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__Seq.cmti
                      -o
-                     compile/p/ppx_deriving_yaml/0.2.1/0.2.1/lib/ppx_deriving_yaml/Ppx_deriving_yaml.odoc
-                     --parent "doc" -I compile/p/ppx_deriving_yaml/0.2.1 -I
-                     compile/p/ppx_deriving_yaml/0.2.1/0.2.1/lib/ppx_deriving_yaml/
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__Seq.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__Uchar.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__Uchar.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__Buffer.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__Buffer.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  File "buffer.mli", line 35, character 0 to line 37, character 1:
+  Warning: Alert unsynchronized_access not expected here.
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__Domain.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__Domain.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__Format.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__Format.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__Lazy.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__Lazy.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__Lexing.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__Lexing.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__Sys.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__Sys.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/warnings.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Warnings.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/location.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Location.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/asttypes.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Asttypes.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/build_path_prefix_map.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Build_path_prefix_map.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__Hashtbl.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__Hashtbl.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  File "hashtbl.mli", line 26, character 0 to line 28, character 1:
+  Warning: Alert unsynchronized_access not expected here.
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__Map.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__Map.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__Set.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__Set.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/identifiable.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Identifiable.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/ident.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Ident.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/longident.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Longident.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__Digest.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__Digest.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__String.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__String.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/misc.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Misc.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/parsetree.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Parsetree.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  File "parsing/parsetree.mli", line 590, characters 40-41:
+  Warning: '.' is not allowed in '{ul ...}' (bulleted list).
+  Suggestion: move '.' into a list item, '{li ...}' or '{- ...}'.
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/type_immediacy.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Type_immediacy.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/outcometree.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Outcometree.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/path.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Path.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/primitive.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Primitive.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/shape.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Shape.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/types.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Types.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  File "typing/types.mli", line 16, characters 4-48:
+  Warning: '{0': heading level should be lower than top heading level '0'.
+  File "typing/types.mli", line 289, character 17 to line 295, character 48:
+  Warning: '{ row_fields = [("X", _)];
+                     row_more   =
+                       Tvariant { row_fields = [("Y", _)];
+                                  row_more   =
+                                    Tvariant { row_fields = [];
+                                               row_more   = _;
+                                               _ }': bad markup.
+  Suggestion: did you mean '{! row_fields = [("X", _)];
+                     row_more   =
+                       Tvariant { row_fields = [("Y", _)];
+                                  row_more   =
+                                    Tvariant { row_fields = [];
+                                               row_more   = _;
+                                               _ }' or '[ row_fields = [("X", _)];
+                     row_more   =
+                       Tvariant { row_fields = [("Y", _)];
+                                  row_more   =
+                                    Tvariant { row_fields = [];
+                                               row_more   = _;
+                                               _ ]'?
+  File "typing/types.mli", line 296, characters 34-35:
+  Warning: Unpaired '}' (end of markup).
+  Suggestion: try '\}'.
+  File "typing/types.mli", line 298, characters 17-18:
+  Warning: Unpaired '}' (end of markup).
+  Suggestion: try '\}'.
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/cmi_format.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Cmi_format.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/load_path.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Load_path.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/subst.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Subst.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/env.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Env.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/genprintval.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Genprintval.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/pass_wrapper.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Pass_wrapper.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/typedtree.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Typedtree.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  File "typing/typedtree.mli", line 58, character 27 to line 59, character 75:
+  Warning: '{ pat_desc = P
+                             ; pat_extra = (Tpat_constraint T, _, _) :: ... }': bad markup.
+  Suggestion: did you mean '{! pat_desc = P
+                             ; pat_extra = (Tpat_constraint T, _, _) :: ... }' or '[ pat_desc = P
+                             ; pat_extra = (Tpat_constraint T, _, _) :: ... ]'?
+  File "typing/typedtree.mli", line 62, character 27 to line 63, character 80:
+  Warning: '{ pat_desc = disjunction
+                             ; pat_extra = (Tpat_type (P, "tconst"), _, _) :: ...}': bad markup.
+  Suggestion: did you mean '{! pat_desc = disjunction
+                             ; pat_extra = (Tpat_type (P, "tconst"), _, _) :: ...}' or '[ pat_desc = disjunction
+                             ; pat_extra = (Tpat_type (P, "tconst"), _, _) :: ...]'?
+  File "typing/typedtree.mli", line 70, character 27 to line 71, character 69:
+  Warning: '{ pat_desc  = Tpat_var "P"
+                             ; pat_extra = (Tpat_unpack, _, _) :: ... }': bad markup.
+  Suggestion: did you mean '{! pat_desc  = Tpat_var "P"
+                             ; pat_extra = (Tpat_unpack, _, _) :: ... }' or '[ pat_desc  = Tpat_var "P"
+                             ; pat_extra = (Tpat_unpack, _, _) :: ... ]'?
+  File "typing/typedtree.mli", line 114, characters 12-33:
+  Warning: '{ l1=P1; ...; ln=Pn }': bad markup.
+  Suggestion: did you mean '{! l1=P1; ...; ln=Pn }' or '[ l1=P1; ...; ln=Pn ]'?
+  File "typing/typedtree.mli", line 115, characters 12-35:
+  Warning: '{ l1=P1; ...; ln=Pn; _}': bad markup.
+  Suggestion: did you mean '{! l1=P1; ...; ln=Pn; _}' or '[ l1=P1; ...; ln=Pn; _]'?
+  File "typing/typedtree.mli", line 237, characters 12-33:
+  Warning: '{ l1=P1; ...; ln=Pn }': bad markup.
+  Suggestion: did you mean '{! l1=P1; ...; ln=Pn }' or '[ l1=P1; ...; ln=Pn ]'?
+  File "typing/typedtree.mli", line 238, characters 12-41:
+  Warning: '{ E0 with l1=P1; ...; ln=Pn }': bad markup.
+  Suggestion: did you mean '{! E0 with l1=P1; ...; ln=Pn }' or '[ E0 with l1=P1; ...; ln=Pn ]'?
+  File "typing/typedtree.mli", line 242, characters 27-45:
+  Warning: '{ l1: t1; l2: t2 }': bad markup.
+  Suggestion: did you mean '{! l1: t1; l2: t2 }' or '[ l1: t1; l2: t2 ]'?
+  File "typing/typedtree.mli", line 243, characters 12-29:
+  Warning: '{ E0 with t2=P2 }': bad markup.
+  Suggestion: did you mean '{! E0 with t2=P2 }' or '[ E0 with t2=P2 ]'?
+  File "typing/typedtree.mli", line 245, character 14 to line 246, character 47:
+  Warning: '{ fields = [| l1, Kept t1; l2 Override P2 |]; representation;
+                  extended_expression = Some E0 }': bad markup.
+  Suggestion: did you mean '{! fields = [| l1, Kept t1; l2 Override P2 |]; representation;
+                  extended_expression = Some E0 }' or '[ fields = [| l1, Kept t1; l2 Override P2 |]; representation;
+                  extended_expression = Some E0 ]'?
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/cmt_format.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Cmt_format.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/debuginfo.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Debuginfo.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/backend_var.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Backend_var.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/lambda.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Lambda.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/targetint.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Targetint.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/cmm.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Cmm.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/afl_instrument.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Afl_instrument.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__Int32.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__Int32.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__Obj.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__Obj.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/topcommon.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Topcommon.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/topeval.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Topeval.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/translmod.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Translmod.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/allocated_const.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Allocated_const.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/clambda_primitives.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Clambda_primitives.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/linkage_name.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Linkage_name.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/compilation_unit.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Compilation_unit.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/internal_variable_names.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Internal_variable_names.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/variable.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Variable.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/closure_element.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Closure_element.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/closure_id.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Closure_id.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/closure_origin.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Closure_origin.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/export_id.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Export_id.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/mutable_variable.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Mutable_variable.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__Int64.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__Int64.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/numbers.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Numbers.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/parameter.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Parameter.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/var_within_closure.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Var_within_closure.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/projection.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Projection.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/set_of_closures_id.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Set_of_closures_id.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/set_of_closures_origin.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Set_of_closures_origin.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/static_exception.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Static_exception.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/symbol.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Symbol.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/tag.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Tag.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/flambda.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Flambda.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  File "middle_end/flambda/flambda.mli", line 393, character 27 to line 395, character 41:
+  Warning: '{ f x ->
+              let applied_function = Symbol f_closure in
+              Apply (applied_function, x) }': bad markup.
+  Suggestion: did you mean '{! f x ->
+              let applied_function = Symbol f_closure in
+              Apply (applied_function, x) }' or '[ f x ->
+              let applied_function = Symbol f_closure in
+              Apply (applied_function, x) ]'?
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/freshening.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Freshening.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/simple_value_approx.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Simple_value_approx.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  File "middle_end/flambda/simple_value_approx.mli", line 107, character 25 to line 109, character 0:
+  Warning: Blank line is not allowed in '[...]' (code).
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/backend_intf.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Backend_intf.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/export_info.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Export_info.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/build_export_info.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Build_export_info.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/x86_ast.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/X86_ast.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/x86_gas.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/X86_gas.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__Printf.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__Printf.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__Array.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__Array.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__Arg.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__Arg.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/profile.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Profile.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/config.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Config.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/clflags.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Clflags.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/arch.cmt
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Arch.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/clambda.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Clambda.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/reg.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Reg.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/mach.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Mach.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/linear.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Linear.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/emitenv.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Emitenv.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/emitaux.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Emitaux.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/asmgen.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Asmgen.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/switch.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Switch.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/ocamldoc/odoc_inherit.cmi
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/Odoc_inherit.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__Mutex.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__Mutex.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__Condition.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__Condition.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/inlining_cost.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Inlining_cost.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/inlining_stats_types.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Inlining_stats_types.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/inline_and_simplify_aux.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Inline_and_simplify_aux.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/inlining_decision_intf.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Inlining_decision_intf.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/lift_code.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Lift_code.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/topdirs.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Topdirs.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__Result.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__Result.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/binutils.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Binutils.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/find_recursive_functions.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Find_recursive_functions.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/remove_unused_arguments.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Remove_unused_arguments.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/translobj.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Translobj.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/cmo_format.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Cmo_format.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/symtable.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Symtable.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/bytelink.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Bytelink.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/printclambda.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Printclambda.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__Atomic.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__Atomic.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/closure.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Closure.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/linearize.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Linearize.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/ocamldoc/odoc_name.cmi
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/Odoc_name.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/ocamldoc/odoc_env.cmi
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/Odoc_env.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/diffing.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Diffing.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/untypeast.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Untypeast.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/ocamldoc/odoc_types.cmi
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/Odoc_types.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/ocamldoc/odoc_misc.cmi
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/Odoc_misc.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__List.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__List.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/ocamldoc/odoc_parameter.cmi
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/Odoc_parameter.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/ocamldoc/odoc_value.cmi
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/Odoc_value.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/ocamldoc/odoc_class.cmi
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/Odoc_class.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/ocamldoc/odoc_type.cmi
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/Odoc_type.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/ocamldoc/odoc_exception.cmi
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/Odoc_exception.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/ocamldoc/odoc_extension.cmi
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/Odoc_extension.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/ocamldoc/odoc_global.cmi
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/Odoc_global.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/ocamldoc/odoc_module.cmi
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/Odoc_module.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/str/str.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/str/Str.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/ocamldoc/odoc_search.cmi
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/Odoc_search.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/str/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/ocamldoc/odoc_info.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/Odoc_info.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/str/
+  File "odoc_info.mli", line 106, characters 72-73:
+  Warning: Stray '@'.
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__Int.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__Int.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/ocamldoc/odoc_messages.cmi
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/Odoc_messages.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/str/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__Filename.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__Filename.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/ocamldoc/odoc_dot.cmi
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/Odoc_dot.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/str/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/ocamldoc/odoc_parser.cmi
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/Odoc_parser.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/instruct.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Instruct.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/printinstr.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Printinstr.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__Semaphore.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__Semaphore.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/emit.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Emit.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/linear_format.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Linear_format.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/pparse.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Pparse.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/local_store.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Local_store.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/topmain.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Topmain.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/arg_helper.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Arg_helper.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/errortrace.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Errortrace.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/typetexp.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Typetexp.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/asmlibrarian.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Asmlibrarian.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__Printexc.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__Printexc.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__Gc.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__Gc.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__BytesLabels.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__BytesLabels.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/dll.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Dll.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/tmc.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Tmc.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  File "lambda/tmc.mli", line 30, character 4 to line 36, character 6:
+  Warning: '{|
+       let[@tail_mod_cons] rec map f = function
+       | [] -> []
+       | x :: xs ->
+         let y = f x in
+         y :: map f xs
+      |}': bad markup.
+  Suggestion: did you mean '{!|
+       let[@tail_mod_cons] rec map f = function
+       | [] -> []
+       | x :: xs ->
+         let y = f x in
+         y :: map f xs
+      |}' or '[|
+       let[@tail_mod_cons] rec map f = function
+       | [] -> []
+       | x :: xs ->
+         let y = f x in
+         y :: map f xs
+      |]'?
+  File "lambda/tmc.mli", line 39, character 4 to line 54, character 6:
+  Warning: '{|
+       let rec map f = function
+       | [] -> []
+       | x :: xs ->
+         let y = f x in
+         let dst = y :: Placeholder in
+         map_dps dst 1 f xs; dst
+       and map_dps dst offset f = function
+       | [] ->
+         dst.offset <- []
+       | x :: xs ->
+         let y = f x in
+         let dst' = y :: Placeholder in
+         dst.offset <- dst';
+         map_dps dst 1 f fx
+      |}': bad markup.
+  Suggestion: did you mean '{!|
+       let rec map f = function
+       | [] -> []
+       | x :: xs ->
+         let y = f x in
+         let dst = y :: Placeholder in
+         map_dps dst 1 f xs; dst
+       and map_dps dst offset f = function
+       | [] ->
+         dst.offset <- []
+       | x :: xs ->
+         let y = f x in
+         let dst' = y :: Placeholder in
+         dst.offset <- dst';
+         map_dps dst 1 f fx
+      |}' or '[|
+       let rec map f = function
+       | [] -> []
+       | x :: xs ->
+         let y = f x in
+         let dst = y :: Placeholder in
+         map_dps dst 1 f xs; dst
+       and map_dps dst offset f = function
+       | [] ->
+         dst.offset <- []
+       | x :: xs ->
+         let y = f x in
+         let dst' = y :: Placeholder in
+         dst.offset <- dst';
+         map_dps dst 1 f fx
+      |]'?
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/tast_iterator.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Tast_iterator.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/terminfo.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Terminfo.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__Option.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__Option.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/simplif.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Simplif.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/cmx_format.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Cmx_format.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/config_boot.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Config_boot.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__Stack.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__Stack.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  File "stack.mli", line 23, character 0 to line 25, character 1:
+  Warning: Alert unsynchronized_accesses not expected here.
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__Complex.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__Complex.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__Bigarray.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__Bigarray.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/unix/unix.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/unix/Unix.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/threads/thread.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/threads/Thread.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/unix/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/ocamldoc/odoc_dag2html.cmi
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/Odoc_dag2html.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/str/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__Char.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__Char.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/ocamldoc/odoc_ocamlhtml.cmi
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/Odoc_ocamlhtml.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/str/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/ocamldoc/odoc_text.cmi
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/Odoc_text.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/ocamldoc/odoc_html.cmi
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/Odoc_html.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/str/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/ocamldoc/odoc_latex_style.cmi
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/Odoc_latex_style.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/ocamldoc/odoc_str.cmi
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/Odoc_str.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/ocamldoc/odoc_to_text.cmi
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/Odoc_to_text.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/str/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/ocamldoc/odoc_latex.cmi
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/Odoc_latex.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/str/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/ocamldoc/odoc_print.cmi
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/Odoc_print.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/ocamldoc/odoc_man.cmi
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/Odoc_man.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/str/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__Bytes.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__Bytes.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/ocamldoc/odoc_texi.cmi
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/Odoc_texi.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/str/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/ocamldoc/odoc_gen.cmi
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/Odoc_gen.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/str/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/ocamldoc/odoc_args.cmi
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/Odoc_args.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/str/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/ref_to_variables.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Ref_to_variables.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/compile_common.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Compile_common.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/compile.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Compile.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  File "driver/compile.mli", line 24, characters 27-28:
+  Warning: Paragraph should begin on its own line.
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/closure_conversion_aux.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Closure_conversion_aux.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__Fun.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__Fun.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__Weak.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__Weak.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/ast_invariants.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Ast_invariants.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/emitcode.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Emitcode.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/strongly_connected_components.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Strongly_connected_components.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/main_args.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Main_args.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  File "driver/main_args.mli", line 271, characters 27-34:
+  Warning: '{c,opt}': bad markup.
+  Suggestion: did you mean '{!c,opt}' or '[c,opt]'?
+  File "driver/main_args.mli", line 272, characters 22-29:
+  Warning: '{c,opt}': bad markup.
+  Suggestion: did you mean '{!c,opt}' or '[c,opt]'?
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__StringLabels.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__StringLabels.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/closure_middle_end.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Closure_middle_end.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/ocamldoc/odoc_merge.cmi
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/Odoc_merge.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/reloadgen.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Reloadgen.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/ocamldoc/odoc_test.cmi
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/Odoc_test.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/str/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/interval.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Interval.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/typedecl_properties.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Typedecl_properties.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/typedecl_separability.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Typedecl_separability.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/ocamldoc/odoc_scan.cmi
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/Odoc_scan.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/augment_specialised_args.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Augment_specialised_args.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/dataflow.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Dataflow.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__In_channel.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__In_channel.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/translclass.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Translclass.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/selection.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Selection.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/typedecl_immediacy.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Typedecl_immediacy.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__Nativeint.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__Nativeint.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__Random.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__Random.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/typedecl_unboxed.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Typedecl_unboxed.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/inlining_stats.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Inlining_stats.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/camlinternalOO.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/CamlinternalOO.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__Oo.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__Oo.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/printpat.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Printpat.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__Callback.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__Callback.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/runtimedef.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Runtimedef.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/proc.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Proc.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/config_main.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Config_main.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/ocamldoc/odoc_cross.cmi
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/Odoc_cross.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__Unit.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__Unit.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/dynlink/dynlink.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/dynlink/Dynlink.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/x86_proc.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/X86_proc.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/translcore.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Translcore.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/translprim.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Translprim.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/btype.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Btype.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/ctype.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Ctype.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/printcmm.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Printcmm.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/rec_check.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Rec_check.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/int_replace_polymorphic_compare.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Int_replace_polymorphic_compare.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/split.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Split.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/matching.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Matching.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/cmmgen_state.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Cmmgen_state.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/diffing_with_keys.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Diffing_with_keys.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/includecore.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Includecore.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/includemod.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Includemod.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/typeclass.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Typeclass.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/export_info_for_pack.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Export_info_for_pack.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/ccomp.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Ccomp.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/unbox_free_vars_of_closures.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Unbox_free_vars_of_closures.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/includemod_errorprinter.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Includemod_errorprinter.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/effect_analysis.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Effect_analysis.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/meta.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Meta.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/traverse_for_exported_symbols.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Traverse_for_exported_symbols.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/typedecl_variance.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Typedecl_variance.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/typedecl.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Typedecl.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/typemod.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Typemod.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/camlinternalMod.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/CamlinternalMod.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/cmxs_format.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Cmxs_format.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__Float.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__Float.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/opcodes.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Opcodes.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/mtype.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Mtype.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/builtin_attributes.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Builtin_attributes.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/printtyp.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Printtyp.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/simplify_boxed_integer_ops_intf.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Simplify_boxed_integer_ops_intf.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/simplify_boxed_integer_ops.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Simplify_boxed_integer_ops.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/convert_primitives.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Convert_primitives.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/camlinternalMenhirLib.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/CamlinternalMenhirLib.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/ast_iterator.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Ast_iterator.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/flambda_utils.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Flambda_utils.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/annot.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Annot.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/domainstate.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Domainstate.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/threads/event.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/threads/Event.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/lift_let_to_initialize_symbol.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Lift_let_to_initialize_symbol.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/ocamldoc/odoc_config.cmi
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/Odoc_config.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/linscan.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Linscan.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/unbox_closures.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Unbox_closures.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/flambda_to_clambda.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Flambda_to_clambda.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/typeopt.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Typeopt.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/liveness.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Liveness.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/id_types.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Id_types.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/selectgen.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Selectgen.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/printlinear.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Printlinear.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__Queue.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__Queue.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  File "queue.mli", line 23, character 0 to line 25, character 1:
+  Warning: Alert unsynchronized_access not expected here.
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/x86_masm.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/X86_masm.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/maindriver.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Maindriver.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/asmlink.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Asmlink.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/share_constants.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Share_constants.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/extract_projections.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Extract_projections.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/interf.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Interf.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/unbox_specialised_args.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Unbox_specialised_args.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__MoreLabels.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__MoreLabels.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  File "moreLabels.mli", line 43, character 2 to line 45, character 3:
+  Warning: Alert unsynchronized_access not expected here.
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/comballoc.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Comballoc.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/flambda_invariants.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Flambda_invariants.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__StdLabels.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__StdLabels.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/schedgen.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Schedgen.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/printast.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Printast.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/patterns.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Patterns.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  File "typing/patterns.mli", line 101, characters 27-28:
+  Warning: Unpaired ']' (end of code).
+  Suggestion: try '\]'.
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/bytegen.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Bytegen.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__Marshal.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__Marshal.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/depend.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Depend.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/un_anf.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Un_anf.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/semantics_of_primitives.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Semantics_of_primitives.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/docstrings.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Docstrings.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/parser.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Parser.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/ocamldoc/odoc_see_lexer.cmi
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/Odoc_see_lexer.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/inline_and_simplify.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Inline_and_simplify.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/optcompile.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Optcompile.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  File "driver/optcompile.mli", line 25, characters 27-28:
+  Warning: Paragraph should begin on its own line.
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__ArrayLabels.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__ArrayLabels.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/runtime_events/runtime_events.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/runtime_events/Runtime_events.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/reload.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Reload.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/lazy_backtrack.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Lazy_backtrack.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/datarepr.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Datarepr.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/bytesections.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Bytesections.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__Effect.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__Effect.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/printtyped.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Printtyped.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/printmach.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Printmach.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/signature_group.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Signature_group.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/parmatch.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Parmatch.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/optmaindriver.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Optmaindriver.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/compenv.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Compenv.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/asmpackager.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Asmpackager.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/lexer.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Lexer.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/ast_helper.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Ast_helper.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/consistbl.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Consistbl.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/ocamldoc/odoc_comments.cmi
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/Odoc_comments.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/ocamldoc/odoc_comments_global.cmi
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/Odoc_comments_global.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/stypes.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Stypes.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/oprint.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Oprint.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/envaux.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Envaux.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/cmt2annot.cmt
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Cmt2annot.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/topstart.cmt
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Topstart.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/cmm_invariants.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Cmm_invariants.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/bytelibrarian.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Bytelibrarian.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/strmatch.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Strmatch.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/simplify_primitives.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Simplify_primitives.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/ast_mapper.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Ast_mapper.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/deadcode.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Deadcode.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/persistent_env.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Persistent_env.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/optmain.cmt
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Optmain.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__ListLabels.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__ListLabels.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__Parsing.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__Parsing.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/flambda_middle_end.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Flambda_middle_end.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/coloring.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Coloring.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/closure_conversion.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Closure_conversion.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/ocamldoc/odoc_lexer.cmi
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/Odoc_lexer.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/str/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/ocamldoc/odoc_sig.cmi
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/Odoc_sig.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/ocamldoc/odoc_ast.cmi
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/Odoc_ast.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/printlambda.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Printlambda.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/polling.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Polling.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/lift_constants.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Lift_constants.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__Ephemeron.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__Ephemeron.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  File "ephemeron.mli", line 70, character 0 to line 72, character 1:
+  Warning: Alert unsynchronized_access not expected here.
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/translattribute.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Translattribute.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__Scanf.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__Scanf.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  File "scanf.mli", line 86, character 0 to line 88, character 1:
+  Warning: Alert unsynchronized_access not expected here.
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/cmm_helpers.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Cmm_helpers.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/initialize_symbol_to_let_symbol.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Initialize_symbol_to_let_symbol.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/inconstant_idents.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Inconstant_idents.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/includeclass.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Includeclass.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/ocamlmktop/ocamlmktop_init.cmi
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamlmktop/Ocamlmktop_init.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/closure_offsets.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Closure_offsets.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/inlining_transforms.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Inlining_transforms.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/std_exit.cmt
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Std_exit.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/simplify_common.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Simplify_common.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__Bool.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__Bool.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/CSEgen.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/CSEgen.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/tast_mapper.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Tast_mapper.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/ocamldoc/odoc_analyse.cmi
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/Odoc_analyse.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/camlinternalFormat.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/CamlinternalFormat.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/expunge.cmt
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Expunge.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/import_approx.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Import_approx.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/tophooks.cmi
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Tophooks.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/pprintast.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Pprintast.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/stdlib__Out_channel.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/Stdlib__Out_channel.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/spill.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Spill.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/typecore.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Typecore.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/predef.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Predef.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/errors.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Errors.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/compilenv.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Compilenv.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/flambda_iterators.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Flambda_iterators.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/CSE.cmt
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/CSE.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/inlining_decision.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Inlining_decision.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/syntaxerr.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Syntaxerr.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/ocamldoc/odoc_dep.cmi
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/Odoc_dep.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/str/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/alias_analysis.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Alias_analysis.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/scheduling.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Scheduling.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/compmisc.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Compmisc.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/remove_free_vars_equal_to_args.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Remove_free_vars_equal_to_args.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/profiling/profiling.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/profiling/Profiling.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/toploop.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Toploop.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/ocamldoc/odoc.cmi
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/Odoc.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/dynlink/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/str/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/ocamldoc/odoc_text_parser.cmi
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/Odoc_text_parser.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/ocamldoc/odoc_text_lexer.cmi
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/Odoc_text_lexer.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/
+                     -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/str/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/ocamldoc/odoc_control.cmi
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/Odoc_control.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/remove_unused_program_constructs.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Remove_unused_program_constructs.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/branch_relaxation_intf.cmt
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Branch_relaxation_intf.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/opterrors.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Opterrors.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/attr_helper.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Attr_helper.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/bytepackager.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Bytepackager.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/cmmgen.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Cmmgen.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/parse.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Parse.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/main.cmt
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Main.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/trace.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Trace.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/unix/unixLabels.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/unix/UnixLabels.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/unix/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/branch_relaxation.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Branch_relaxation.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/invariant_params.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Invariant_params.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/x86_dsl.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/X86_dsl.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/remove_unused_closure_vars.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Remove_unused_closure_vars.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/printclambda_primitives.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Printclambda_primitives.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/
+  compile command: odoc compile
+                     prep/universes/29/ocaml-base-compiler/5.0.0/lib/ocaml/compiler-libs/makedepend.cmti
+                     -o
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Makedepend.odoc
+                     --parent "doc" -I compile/p/ocaml-base-compiler/5.0.0 -I
+                     compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/
   No children
-  3 other files to copy
-  dst: linked/p/ppx_deriving_yaml/0.2.1/doc/opam
-  dst: linked/p/ppx_deriving_yaml/0.2.1/doc/README.md
-  dst: linked/p/ppx_deriving_yaml/0.2.1/doc/CHANGES.md
-  dst: linked/p/ppx_deriving_yaml/0.2.1/doc/LICENSE.md
-  dest: linked/p/ppx_deriving_yaml/0.2.1/doc/README.md
-  dest: linked/p/ppx_deriving_yaml/0.2.1/doc/CHANGES.md
-  dest: linked/p/ppx_deriving_yaml/0.2.1/doc/LICENSE.md
+  File "compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Topeval.odoc":
+  Warning: While resolving the expansion of include at File "toplevel/topeval.mli", line 48, character 0
+  Failed to lookup type unresolvedroot(Topcommon).MakeEvalPrinter(identifier((root Topeval).{EvalBase}6, true)).gen_printer Parent_module: Unresolved apply
+  File "compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/compiler-libs/Topeval.odoc":
+  Warning: Failed to resolve module type path unresolvedroot(Topcommon).EVAL_BASE Find failure
+  File "map.mli", line 223, characters 16-27:
+  Warning: Failed to resolve reference unresolvedroot(Map).Make Couldn't find "Make"
+  File "map.mli", line 223, characters 16-27:
+  Warning: While resolving the expansion of include at File "typing/shape.mli", line 32, character 2
+  While resolving the expansion of include at File "utils/identifiable.mli", line 51, character 2
+  Failed to resolve reference unresolvedroot(Map).Make Couldn't find "Make"
+  File "set.mli", line 189, characters 16-27:
+  Warning: While resolving the expansion of include at File "typing/shape.mli", line 32, character 2
+  While resolving the expansion of include at File "utils/identifiable.mli", line 38, character 2
+  Failed to resolve reference unresolvedroot(Set).Make Couldn't find "Make"
+  File "parsing/parsetree.mli", line 19, characters 2-33:
+  Warning: Failed to resolve reference unresolvedroot(Compiler_libs) Couldn't find "Compiler_libs"
+  File "map.mli", line 223, characters 16-27:
+  Warning: While resolving the expansion of include at File "middle_end/flambda/base_types/set_of_closures_id.mli", line 22, character 0
+  While resolving the expansion of include at File "utils/identifiable.mli", line 51, character 2
+  Failed to resolve reference unresolvedroot(Map).Make Couldn't find "Make"
+  File "set.mli", line 189, characters 16-27:
+  Warning: While resolving the expansion of include at File "middle_end/flambda/base_types/set_of_closures_id.mli", line 22, character 0
+  While resolving the expansion of include at File "utils/identifiable.mli", line 38, character 2
+  Failed to resolve reference unresolvedroot(Set).Make Couldn't find "Make"
+  File "parsing/longident.mli", line 19, characters 2-33:
+  Warning: Failed to resolve reference unresolvedroot(Compiler_libs) Couldn't find "Compiler_libs"
+  File "utils/targetint.mli", line 28, characters 2-33:
+  Warning: Failed to resolve reference unresolvedroot(Compiler_libs) Couldn't find "Compiler_libs"
+  File "utils/warnings.mli", line 19, characters 2-33:
+  Warning: Failed to resolve reference unresolvedroot(Compiler_libs) Couldn't find "Compiler_libs"
+  File "driver/pparse.mli", line 19, characters 2-33:
+  Warning: Failed to resolve reference unresolvedroot(Compiler_libs) Couldn't find "Compiler_libs"
+  File "utils/arg_helper.mli", line 24, characters 2-33:
+  Warning: Failed to resolve reference unresolvedroot(Compiler_libs) Couldn't find "Compiler_libs"
+  File "map.mli", line 223, characters 16-27:
+  Warning: Failed to resolve reference unresolvedroot(Map).Make Couldn't find "Make"
+  File "odoc_info.mli", line 808, characters 28-55:
+  Warning: Failed to resolve reference unresolvedroot(Odoc_args).hidden_modules Couldn't find "hidden_modules"
+  File "utils/numbers.mli", line 20, characters 2-33:
+  Warning: Failed to resolve reference unresolvedroot(Compiler_libs) Couldn't find "Compiler_libs"
+  File "map.mli", line 223, characters 16-27:
+  Warning: While resolving the expansion of include at File "utils/identifiable.mli", line 51, character 2
+  Failed to resolve reference unresolvedroot(Map).Make Couldn't find "Make"
+  File "set.mli", line 189, characters 16-27:
+  Warning: While resolving the expansion of include at File "utils/identifiable.mli", line 38, character 2
+  Failed to resolve reference unresolvedroot(Set).Make Couldn't find "Make"
+  File "map.mli", line 223, characters 16-27:
+  Warning: While resolving the expansion of include at File "utils/numbers.mli", line 25, character 2
+  While resolving the expansion of include at File "utils/identifiable.mli", line 51, character 2
+  Failed to resolve reference unresolvedroot(Map).Make Couldn't find "Make"
+  File "set.mli", line 189, characters 16-27:
+  Warning: While resolving the expansion of include at File "utils/numbers.mli", line 25, character 2
+  While resolving the expansion of include at File "utils/identifiable.mli", line 38, character 2
+  Failed to resolve reference unresolvedroot(Set).Make Couldn't find "Make"
+  File "map.mli", line 223, characters 16-27:
+  Warning: While resolving the expansion of include at File "utils/identifiable.mli", line 51, character 2
+  Failed to resolve reference unresolvedroot(Map).Make Couldn't find "Make"
+  File "set.mli", line 189, characters 16-27:
+  Warning: While resolving the expansion of include at File "utils/identifiable.mli", line 38, character 2
+  Failed to resolve reference unresolvedroot(Set).Make Couldn't find "Make"
+  File "map.mli", line 223, characters 16-27:
+  Warning: While resolving the expansion of include at File "middle_end/variable.mli", line 29, character 0
+  While resolving the expansion of include at File "utils/identifiable.mli", line 51, character 2
+  Failed to resolve reference unresolvedroot(Map).Make Couldn't find "Make"
+  File "set.mli", line 189, characters 16-27:
+  Warning: While resolving the expansion of include at File "middle_end/variable.mli", line 29, character 0
+  While resolving the expansion of include at File "utils/identifiable.mli", line 38, character 2
+  Failed to resolve reference unresolvedroot(Set).Make Couldn't find "Make"
+  File "lambda/tmc.mli", line 21, characters 2-33:
+  Warning: Failed to resolve reference unresolvedroot(Compiler_libs) Couldn't find "Compiler_libs"
+  File "utils/terminfo.mli", line 19, characters 2-33:
+  Warning: Failed to resolve reference unresolvedroot(Compiler_libs) Couldn't find "Compiler_libs"
+  File "lambda/simplif.mli", line 19, characters 2-33:
+  Warning: Failed to resolve reference unresolvedroot(Compiler_libs) Couldn't find "Compiler_libs"
+  File "utils/config_boot.mli", line 19, characters 2-33:
+  Warning: Failed to resolve reference unresolvedroot(Compiler_libs) Couldn't find "Compiler_libs"
+  File "map.mli", line 223, characters 16-27:
+  Warning: While resolving the expansion of include at File "middle_end/flambda/projection.mli", line 74, character 0
+  While resolving the expansion of include at File "utils/identifiable.mli", line 51, character 2
+  Failed to resolve reference unresolvedroot(Map).Make Couldn't find "Make"
+  File "set.mli", line 189, characters 16-27:
+  Warning: While resolving the expansion of include at File "middle_end/flambda/projection.mli", line 74, character 0
+  While resolving the expansion of include at File "utils/identifiable.mli", line 38, character 2
+  Failed to resolve reference unresolvedroot(Set).Make Couldn't find "Make"
+  File "map.mli", line 223, characters 16-27:
+  Warning: While resolving the expansion of include at File "middle_end/flambda/base_types/closure_id.mli", line 27, character 0
+  While resolving the expansion of include at File "middle_end/flambda/base_types/closure_element.mli", line 19, character 0
+  While resolving the expansion of include at File "utils/identifiable.mli", line 51, character 2
+  Failed to resolve reference unresolvedroot(Map).Make Couldn't find "Make"
+  File "set.mli", line 189, characters 16-27:
+  Warning: While resolving the expansion of include at File "middle_end/flambda/base_types/closure_id.mli", line 27, character 0
+  While resolving the expansion of include at File "middle_end/flambda/base_types/closure_element.mli", line 19, character 0
+  While resolving the expansion of include at File "utils/identifiable.mli", line 38, character 2
+  Failed to resolve reference unresolvedroot(Set).Make Couldn't find "Make"
+  File "map.mli", line 223, characters 16-27:
+  Warning: While resolving the expansion of include at File "middle_end/symbol.mli", line 29, character 0
+  While resolving the expansion of include at File "utils/identifiable.mli", line 51, character 2
+  Failed to resolve reference unresolvedroot(Map).Make Couldn't find "Make"
+  File "set.mli", line 189, characters 16-27:
+  Warning: While resolving the expansion of include at File "middle_end/symbol.mli", line 29, character 0
+  While resolving the expansion of include at File "utils/identifiable.mli", line 38, character 2
+  Failed to resolve reference unresolvedroot(Set).Make Couldn't find "Make"
+  File "parsing/ast_invariants.mli", line 18, characters 2-33:
+  Warning: Failed to resolve reference unresolvedroot(Compiler_libs) Couldn't find "Compiler_libs"
+  File "map.mli", line 223, characters 16-27:
+  Warning: While resolving the expansion of include at File "middle_end/flambda/base_types/tag.mli", line 21, character 0
+  While resolving the expansion of include at File "utils/identifiable.mli", line 51, character 2
+  Failed to resolve reference unresolvedroot(Map).Make Couldn't find "Make"
+  File "set.mli", line 189, characters 16-27:
+  Warning: While resolving the expansion of include at File "middle_end/flambda/base_types/tag.mli", line 21, character 0
+  While resolving the expansion of include at File "utils/identifiable.mli", line 38, character 2
+  Failed to resolve reference unresolvedroot(Set).Make Couldn't find "Make"
+  File "utils/strongly_connected_components.mli", line 20, characters 2-33:
+  Warning: Failed to resolve reference unresolvedroot(Compiler_libs) Couldn't find "Compiler_libs"
+  File "map.mli", line 223, characters 16-27:
+  Warning: While resolving the expansion of include at File "utils/identifiable.mli", line 51, character 2
+  Failed to resolve reference unresolvedroot(Map).Make Couldn't find "Make"
+  File "set.mli", line 189, characters 16-27:
+  Warning: While resolving the expansion of include at File "utils/identifiable.mli", line 38, character 2
+  Failed to resolve reference unresolvedroot(Set).Make Couldn't find "Make"
+  File "map.mli", line 223, characters 16-27:
+  Warning: While resolving the expansion of include at File "utils/identifiable.mli", line 51, character 2
+  Failed to resolve reference unresolvedroot(Map).Make Couldn't find "Make"
+  File "set.mli", line 189, characters 16-27:
+  Warning: While resolving the expansion of include at File "utils/identifiable.mli", line 38, character 2
+  Failed to resolve reference unresolvedroot(Set).Make Couldn't find "Make"
+  File "compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/Odoc_ocamlhtml.odoc":
+  Warning: Failed to lookup type unresolvedroot(Stdlib).Lexing.lex_tables Find failure
+  File "typing/typedecl_separability.mli", line 126, characters 42-50:
+  Warning: Reference to 'Error' is ambiguous. Please specify its kind: constructor-Error, exception-Error.
+  File "typing/typedecl_separability.mli", line 111, characters 8-16:
+  Warning: Reference to 'Error' is ambiguous. Please specify its kind: constructor-Error, exception-Error.
+  File "utils/config_main.mli", line 19, characters 2-33:
+  Warning: Failed to resolve reference unresolvedroot(Compiler_libs) Couldn't find "Compiler_libs"
+  File "parsing/location.mli", line 19, characters 2-33:
+  Warning: Failed to resolve reference unresolvedroot(Compiler_libs) Couldn't find "Compiler_libs"
+  File "map.mli", line 223, characters 16-27:
+  Warning: While resolving the expansion of include at File "typing/ident.mli", line 20, character 0
+  While resolving the expansion of include at File "utils/identifiable.mli", line 51, character 2
+  Failed to resolve reference unresolvedroot(Map).Make Couldn't find "Make"
+  File "set.mli", line 189, characters 16-27:
+  Warning: While resolving the expansion of include at File "typing/ident.mli", line 20, character 0
+  While resolving the expansion of include at File "utils/identifiable.mli", line 38, character 2
+  Failed to resolve reference unresolvedroot(Set).Make Couldn't find "Make"
+  File "map.mli", line 223, characters 16-27:
+  Warning: While resolving the expansion of include at File "middle_end/flambda/base_types/var_within_closure.mli", line 24, character 0
+  While resolving the expansion of include at File "middle_end/flambda/base_types/closure_element.mli", line 19, character 0
+  While resolving the expansion of include at File "utils/identifiable.mli", line 51, character 2
+  Failed to resolve reference unresolvedroot(Map).Make Couldn't find "Make"
+  File "set.mli", line 189, characters 16-27:
+  Warning: While resolving the expansion of include at File "middle_end/flambda/base_types/var_within_closure.mli", line 24, character 0
+  While resolving the expansion of include at File "middle_end/flambda/base_types/closure_element.mli", line 19, character 0
+  While resolving the expansion of include at File "utils/identifiable.mli", line 38, character 2
+  Failed to resolve reference unresolvedroot(Set).Make Couldn't find "Make"
+  File "utils/ccomp.mli", line 19, characters 2-33:
+  Warning: Failed to resolve reference unresolvedroot(Compiler_libs) Couldn't find "Compiler_libs"
+  File "map.mli", line 223, characters 16-27:
+  Warning: While resolving the expansion of include at File "middle_end/compilation_unit.mli", line 19, character 0
+  While resolving the expansion of include at File "utils/identifiable.mli", line 51, character 2
+  Failed to resolve reference unresolvedroot(Map).Make Couldn't find "Make"
+  File "set.mli", line 189, characters 16-27:
+  Warning: While resolving the expansion of include at File "middle_end/compilation_unit.mli", line 19, character 0
+  While resolving the expansion of include at File "utils/identifiable.mli", line 38, character 2
+  Failed to resolve reference unresolvedroot(Set).Make Couldn't find "Make"
+  File "typing/typemod.mli", line 19, characters 2-33:
+  Warning: Failed to resolve reference unresolvedroot(Compiler_libs) Couldn't find "Compiler_libs"
+  File "parsing/builtin_attributes.mli", line 32, characters 2-33:
+  Warning: Failed to resolve reference unresolvedroot(Compiler_libs) Couldn't find "Compiler_libs"
+  File "utils/build_path_prefix_map.mli", line 19, characters 2-33:
+  Warning: Failed to resolve reference unresolvedroot(Compiler_libs) Couldn't find "Compiler_libs"
+  File "parsing/ast_iterator.mli", line 22, characters 2-33:
+  Warning: Failed to resolve reference unresolvedroot(Compiler_libs) Couldn't find "Compiler_libs"
+  File "map.mli", line 223, characters 16-27:
+  Warning: While resolving the expansion of include at File "middle_end/flambda/base_types/static_exception.mli", line 22, character 0
+  While resolving the expansion of include at File "utils/identifiable.mli", line 51, character 2
+  Failed to resolve reference unresolvedroot(Map).Make Couldn't find "Make"
+  File "set.mli", line 189, characters 16-27:
+  Warning: While resolving the expansion of include at File "middle_end/flambda/base_types/static_exception.mli", line 22, character 0
+  While resolving the expansion of include at File "utils/identifiable.mli", line 38, character 2
+  Failed to resolve reference unresolvedroot(Set).Make Couldn't find "Make"
+  File "utils/identifiable.mli", line 20, characters 2-33:
+  Warning: Failed to resolve reference unresolvedroot(Compiler_libs) Couldn't find "Compiler_libs"
+  File "map.mli", line 223, characters 16-27:
+  Warning: While resolving the expansion of include at File "utils/identifiable.mli", line 51, character 2
+  Failed to resolve reference unresolvedroot(Map).Make Couldn't find "Make"
+  File "map.mli", line 223, characters 16-27:
+  Warning: While resolving the expansion of include at File "utils/identifiable.mli", line 51, character 2
+  Reference to 'Map' is ambiguous. Please specify its kind: module-Map, module-type-Map.
+  File "set.mli", line 189, characters 16-27:
+  Warning: While resolving the expansion of include at File "utils/identifiable.mli", line 38, character 2
+  Failed to resolve reference unresolvedroot(Set).Make Couldn't find "Make"
+  File "set.mli", line 189, characters 16-27:
+  Warning: While resolving the expansion of include at File "utils/identifiable.mli", line 38, character 2
+  Reference to 'Set' is ambiguous. Please specify its kind: module-Set, module-type-Set.
+  File "map.mli", line 223, characters 16-27:
+  Warning: While resolving the expansion of include at File "utils/identifiable.mli", line 51, character 2
+  Failed to resolve reference unresolvedroot(Map).Make Couldn't find "Make"
+  File "map.mli", line 223, characters 16-27:
+  Warning: While resolving the expansion of include at File "utils/identifiable.mli", line 51, character 2
+  Reference to 'Map' is ambiguous. Please specify its kind: module-Map, module-type-Map.
+  File "set.mli", line 189, characters 16-27:
+  Warning: While resolving the expansion of include at File "utils/identifiable.mli", line 38, character 2
+  Failed to resolve reference unresolvedroot(Set).Make Couldn't find "Make"
+  File "set.mli", line 189, characters 16-27:
+  Warning: While resolving the expansion of include at File "utils/identifiable.mli", line 38, character 2
+  Reference to 'Set' is ambiguous. Please specify its kind: module-Set, module-type-Set.
+  File "map.mli", line 223, characters 16-27:
+  Warning: While resolving the expansion of include at File "utils/identifiable.mli", line 51, character 2
+  Failed to resolve reference unresolvedroot(Map).Make Couldn't find "Make"
+  File "map.mli", line 223, characters 16-27:
+  Warning: While resolving the expansion of include at File "utils/identifiable.mli", line 51, character 2
+  Reference to 'Map' is ambiguous. Please specify its kind: module-Map, module-type-Map.
+  File "set.mli", line 189, characters 16-27:
+  Warning: While resolving the expansion of include at File "utils/identifiable.mli", line 38, character 2
+  Failed to resolve reference unresolvedroot(Set).Make Couldn't find "Make"
+  File "set.mli", line 189, characters 16-27:
+  Warning: While resolving the expansion of include at File "utils/identifiable.mli", line 38, character 2
+  Reference to 'Set' is ambiguous. Please specify its kind: module-Set, module-type-Set.
+  File "stdlib.mli", line 25, characters 4-40:
+  Warning: Multiple sections named 'modules' found. Please alter one to ensure reference is unambiguous. Locations:
+    File "stdlib.mli", line 1383, character 4
+    File "stdlib.mli", line 1383, character 4
+  File "stdlib.mli", line 1342, characters 34-52:
+  Warning: Failed to resolve reference unresolvedroot(Ocaml_operators) Couldn't find "Ocaml_operators"
+  File "stdlib.mli", line 1227, characters 35-53:
+  Warning: Failed to resolve reference unresolvedroot(Ocaml_operators) Couldn't find "Ocaml_operators"
+  File "stdlib.mli", line 1221, characters 23-41:
+  Warning: Failed to resolve reference unresolvedroot(Ocaml_operators) Couldn't find "Ocaml_operators"
+  File "stdlib.mli", line 816, characters 34-52:
+  Warning: Failed to resolve reference unresolvedroot(Ocaml_operators) Couldn't find "Ocaml_operators"
+  File "stdlib.mli", line 689, characters 36-54:
+  Warning: Failed to resolve reference unresolvedroot(Ocaml_operators) Couldn't find "Ocaml_operators"
+  File "stdlib.mli", line 473, characters 36-54:
+  Warning: Failed to resolve reference unresolvedroot(Ocaml_operators) Couldn't find "Ocaml_operators"
+  File "stdlib.mli", line 467, characters 35-53:
+  Warning: Failed to resolve reference unresolvedroot(Ocaml_operators) Couldn't find "Ocaml_operators"
+  File "stdlib.mli", line 462, characters 35-53:
+  Warning: Failed to resolve reference unresolvedroot(Ocaml_operators) Couldn't find "Ocaml_operators"
+  File "stdlib.mli", line 457, characters 35-53:
+  Warning: Failed to resolve reference unresolvedroot(Ocaml_operators) Couldn't find "Ocaml_operators"
+  File "stdlib.mli", line 452, characters 35-53:
+  Warning: Failed to resolve reference unresolvedroot(Ocaml_operators) Couldn't find "Ocaml_operators"
+  File "stdlib.mli", line 446, characters 24-42:
+  Warning: Failed to resolve reference unresolvedroot(Ocaml_operators) Couldn't find "Ocaml_operators"
+  File "stdlib.mli", line 441, characters 24-42:
+  Warning: Failed to resolve reference unresolvedroot(Ocaml_operators) Couldn't find "Ocaml_operators"
+  File "stdlib.mli", line 422, characters 36-54:
+  Warning: Failed to resolve reference unresolvedroot(Ocaml_operators) Couldn't find "Ocaml_operators"
+  File "stdlib.mli", line 415, characters 36-54:
+  Warning: Failed to resolve reference unresolvedroot(Ocaml_operators) Couldn't find "Ocaml_operators"
+  File "stdlib.mli", line 407, characters 36-54:
+  Warning: Failed to resolve reference unresolvedroot(Ocaml_operators) Couldn't find "Ocaml_operators"
+  File "stdlib.mli", line 398, characters 35-53:
+  Warning: Failed to resolve reference unresolvedroot(Ocaml_operators) Couldn't find "Ocaml_operators"
+  File "stdlib.mli", line 393, characters 35-53:
+  Warning: Failed to resolve reference unresolvedroot(Ocaml_operators) Couldn't find "Ocaml_operators"
+  File "stdlib.mli", line 388, characters 35-53:
+  Warning: Failed to resolve reference unresolvedroot(Ocaml_operators) Couldn't find "Ocaml_operators"
+  File "stdlib.mli", line 368, characters 34-52:
+  Warning: Failed to resolve reference unresolvedroot(Ocaml_operators) Couldn't find "Ocaml_operators"
+  File "stdlib.mli", line 356, characters 34-52:
+  Warning: Failed to resolve reference unresolvedroot(Ocaml_operators) Couldn't find "Ocaml_operators"
+  File "stdlib.mli", line 347, characters 35-53:
+  Warning: Failed to resolve reference unresolvedroot(Ocaml_operators) Couldn't find "Ocaml_operators"
+  File "stdlib.mli", line 342, characters 37-55:
+  Warning: Failed to resolve reference unresolvedroot(Ocaml_operators) Couldn't find "Ocaml_operators"
+  File "stdlib.mli", line 337, characters 35-53:
+  Warning: Failed to resolve reference unresolvedroot(Ocaml_operators) Couldn't find "Ocaml_operators"
+  File "stdlib.mli", line 325, characters 24-42:
+  Warning: Failed to resolve reference unresolvedroot(Ocaml_operators) Couldn't find "Ocaml_operators"
+  File "stdlib.mli", line 319, characters 24-42:
+  Warning: Failed to resolve reference unresolvedroot(Ocaml_operators) Couldn't find "Ocaml_operators"
+  File "stdlib.mli", line 307, characters 33-51:
+  Warning: Failed to resolve reference unresolvedroot(Ocaml_operators) Couldn't find "Ocaml_operators"
+  File "stdlib.mli", line 300, characters 32-50:
+  Warning: Failed to resolve reference unresolvedroot(Ocaml_operators) Couldn't find "Ocaml_operators"
+  File "stdlib.mli", line 225, characters 36-54:
+  Warning: Failed to resolve reference unresolvedroot(Ocaml_operators) Couldn't find "Ocaml_operators"
+  File "stdlib.mli", line 218, characters 36-54:
+  Warning: Failed to resolve reference unresolvedroot(Ocaml_operators) Couldn't find "Ocaml_operators"
+  File "stdlib.mli", line 205, characters 36-54:
+  Warning: Failed to resolve reference unresolvedroot(Ocaml_operators) Couldn't find "Ocaml_operators"
+  File "stdlib.mli", line 200, characters 35-53:
+  Warning: Failed to resolve reference unresolvedroot(Ocaml_operators) Couldn't find "Ocaml_operators"
+  File "stdlib.mli", line 159, characters 34-52:
+  Warning: Failed to resolve reference unresolvedroot(Ocaml_operators) Couldn't find "Ocaml_operators"
+  File "stdlib.mli", line 147, characters 36-54:
+  Warning: Failed to resolve reference unresolvedroot(Ocaml_operators) Couldn't find "Ocaml_operators"
+  File "stdlib.mli", line 142, characters 36-54:
+  Warning: Failed to resolve reference unresolvedroot(Ocaml_operators) Couldn't find "Ocaml_operators"
+  File "stdlib.mli", line 137, characters 35-53:
+  Warning: Failed to resolve reference unresolvedroot(Ocaml_operators) Couldn't find "Ocaml_operators"
+  File "stdlib.mli", line 132, characters 35-53:
+  Warning: Failed to resolve reference unresolvedroot(Ocaml_operators) Couldn't find "Ocaml_operators"
+  File "stdlib.mli", line 128, characters 34-52:
+  Warning: Failed to resolve reference unresolvedroot(Ocaml_operators) Couldn't find "Ocaml_operators"
+  File "parsing/printast.mli", line 19, characters 2-33:
+  Warning: Failed to resolve reference unresolvedroot(Compiler_libs) Couldn't find "Compiler_libs"
+  File "parsing/depend.mli", line 19, characters 2-33:
+  Warning: Failed to resolve reference unresolvedroot(Compiler_libs) Couldn't find "Compiler_libs"
+  File "compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/Odoc_see_lexer.odoc":
+  Warning: Failed to lookup type unresolvedroot(Stdlib).Lexing.lex_tables Find failure
+  File "parsing/asttypes.mli", line 19, characters 2-33:
+  Warning: Failed to resolve reference unresolvedroot(Compiler_libs) Couldn't find "Compiler_libs"
+  File "set.mli", line 189, characters 16-27:
+  Warning: Failed to resolve reference unresolvedroot(Set).Make Couldn't find "Make"
+  File "map.mli", line 223, characters 16-27:
+  Warning: Failed to resolve reference unresolvedroot(Map).Make Couldn't find "Make"
+  File "typing/signature_group.mli", line 58, characters 43-54:
+  Warning: Failed to resolve reference unresolvedroot(full_seq) Couldn't find "full_seq"
+  File "map.mli", line 223, characters 16-27:
+  Warning: Failed to resolve reference unresolvedroot(Map).Make Couldn't find "Make"
+  File "set.mli", line 189, characters 16-27:
+  Warning: Failed to resolve reference unresolvedroot(Set).Make Couldn't find "Make"
+  File "parsing/lexer.mli", line 19, characters 2-33:
+  Warning: Failed to resolve reference unresolvedroot(Compiler_libs) Couldn't find "Compiler_libs"
+  File "parsing/ast_helper.mli", line 19, characters 2-33:
+  Warning: Failed to resolve reference unresolvedroot(Compiler_libs) Couldn't find "Compiler_libs"
+  File "utils/consistbl.mli", line 19, characters 2-33:
+  Warning: Failed to resolve reference unresolvedroot(Compiler_libs) Couldn't find "Compiler_libs"
+  File "map.mli", line 223, characters 16-27:
+  Warning: Failed to resolve reference unresolvedroot(Map).Make Couldn't find "Make"
+  File "set.mli", line 189, characters 16-27:
+  Warning: Failed to resolve reference unresolvedroot(Set).Make Couldn't find "Make"
+  File "parsing/ast_mapper.mli", line 50, characters 2-33:
+  Warning: Failed to resolve reference unresolvedroot(Compiler_libs) Couldn't find "Compiler_libs"
+  File "map.mli", line 223, characters 16-27:
+  Warning: While resolving the expansion of include at File "middle_end/linkage_name.mli", line 19, character 0
+  While resolving the expansion of include at File "utils/identifiable.mli", line 51, character 2
+  Failed to resolve reference unresolvedroot(Map).Make Couldn't find "Make"
+  File "set.mli", line 189, characters 16-27:
+  Warning: While resolving the expansion of include at File "middle_end/linkage_name.mli", line 19, character 0
+  While resolving the expansion of include at File "utils/identifiable.mli", line 38, character 2
+  Failed to resolve reference unresolvedroot(Set).Make Couldn't find "Make"
+  File "map.mli", line 223, characters 16-27:
+  Warning: While resolving the expansion of include at File "middle_end/flambda/base_types/closure_element.mli", line 19, character 0
+  While resolving the expansion of include at File "utils/identifiable.mli", line 51, character 2
+  Failed to resolve reference unresolvedroot(Map).Make Couldn't find "Make"
+  File "set.mli", line 189, characters 16-27:
+  Warning: While resolving the expansion of include at File "middle_end/flambda/base_types/closure_element.mli", line 19, character 0
+  While resolving the expansion of include at File "utils/identifiable.mli", line 38, character 2
+  Failed to resolve reference unresolvedroot(Set).Make Couldn't find "Make"
+  File "parsing/docstrings.mli", line 19, characters 2-33:
+  Warning: Failed to resolve reference unresolvedroot(Compiler_libs) Couldn't find "Compiler_libs"
+  File "compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/Odoc_lexer.odoc":
+  Warning: Failed to lookup type unresolvedroot(Stdlib).Lexing.lex_tables Find failure
+  File "utils/misc.mli", line 19, characters 2-33:
+  Warning: Failed to resolve reference unresolvedroot(Compiler_libs) Couldn't find "Compiler_libs"
+  File "map.mli", line 223, characters 16-27:
+  Warning: Failed to resolve reference unresolvedroot(Map).Make Couldn't find "Make"
+  File "set.mli", line 189, characters 16-27:
+  Warning: Failed to resolve reference unresolvedroot(Set).Make Couldn't find "Make"
+  File "string.mli", line 122, characters 18-33:
+  Warning: While resolving the expansion of include at File "utils/misc.mli", line 166, character 4
+  Failed to resolve reference unresolvedroot(Stdlib).(^) Couldn't find "(^)"
+  File "map.mli", line 223, characters 16-27:
+  Warning: While resolving the expansion of include at File "middle_end/flambda/base_types/closure_origin.mli", line 17, character 0
+  While resolving the expansion of include at File "utils/identifiable.mli", line 51, character 2
+  Failed to resolve reference unresolvedroot(Map).Make Couldn't find "Make"
+  File "set.mli", line 189, characters 16-27:
+  Warning: While resolving the expansion of include at File "middle_end/flambda/base_types/closure_origin.mli", line 17, character 0
+  While resolving the expansion of include at File "utils/identifiable.mli", line 38, character 2
+  Failed to resolve reference unresolvedroot(Set).Make Couldn't find "Make"
+  File "utils/profile.mli", line 19, characters 2-33:
+  Warning: Failed to resolve reference unresolvedroot(Compiler_libs) Couldn't find "Compiler_libs"
+  File "parsing/pprintast.mli", line 20, characters 2-33:
+  Warning: Failed to resolve reference unresolvedroot(Compiler_libs) Couldn't find "Compiler_libs"
+  File "parsing/syntaxerr.mli", line 19, characters 2-33:
+  Warning: Failed to resolve reference unresolvedroot(Compiler_libs) Couldn't find "Compiler_libs"
+  File "typing/typedtree.mli", line 20, characters 12-27:
+  Warning: Failed to resolve reference unresolvedroot(Longindent).t Couldn't find "Longindent"
+  File "map.mli", line 223, characters 16-27:
+  Warning: While resolving the expansion of include at File "middle_end/flambda/base_types/set_of_closures_origin.mli", line 17, character 0
+  While resolving the expansion of include at File "utils/identifiable.mli", line 51, character 2
+  Failed to resolve reference unresolvedroot(Map).Make Couldn't find "Make"
+  File "set.mli", line 189, characters 16-27:
+  Warning: While resolving the expansion of include at File "middle_end/flambda/base_types/set_of_closures_origin.mli", line 17, character 0
+  While resolving the expansion of include at File "utils/identifiable.mli", line 38, character 2
+  Failed to resolve reference unresolvedroot(Set).Make Couldn't find "Make"
+  File "map.mli", line 223, characters 16-27:
+  Warning: While resolving the expansion of include at File "middle_end/flambda/base_types/mutable_variable.mli", line 19, character 0
+  While resolving the expansion of include at File "utils/identifiable.mli", line 51, character 2
+  Failed to resolve reference unresolvedroot(Map).Make Couldn't find "Make"
+  File "set.mli", line 189, characters 16-27:
+  Warning: While resolving the expansion of include at File "middle_end/flambda/base_types/mutable_variable.mli", line 19, character 0
+  While resolving the expansion of include at File "utils/identifiable.mli", line 38, character 2
+  Failed to resolve reference unresolvedroot(Set).Make Couldn't find "Make"
+  File "map.mli", line 223, characters 16-27:
+  Warning: While resolving the expansion of include at File "middle_end/flambda/parameter.mli", line 45, character 0
+  While resolving the expansion of include at File "utils/identifiable.mli", line 51, character 2
+  Failed to resolve reference unresolvedroot(Map).Make Couldn't find "Make"
+  File "set.mli", line 189, characters 16-27:
+  Warning: While resolving the expansion of include at File "middle_end/flambda/parameter.mli", line 41, character 2
+  While resolving the expansion of include at File "utils/identifiable.mli", line 38, character 2
+  Failed to resolve reference unresolvedroot(Set).Make Couldn't find "Make"
+  File "compile/p/ocaml-base-compiler/5.0.0/5.0.0/lib/ocaml/ocamldoc/Odoc_text_lexer.odoc":
+  Warning: Failed to lookup type unresolvedroot(Stdlib).Lexing.lex_tables Find failure
+  File "map.mli", line 223, characters 16-27:
+  Warning: While resolving the expansion of include at File "middle_end/flambda/base_types/export_id.mli", line 24, character 0
+  While resolving the expansion of include at File "utils/identifiable.mli", line 51, character 2
+  Failed to resolve reference unresolvedroot(Map).Make Couldn't find "Make"
+  File "set.mli", line 189, characters 16-27:
+  Warning: While resolving the expansion of include at File "middle_end/flambda/base_types/export_id.mli", line 24, character 0
+  While resolving the expansion of include at File "utils/identifiable.mli", line 38, character 2
+  Failed to resolve reference unresolvedroot(Set).Make Couldn't find "Make"
+  File "map.mli", line 223, characters 16-27:
+  Warning: While resolving the expansion of include at File "utils/identifiable.mli", line 51, character 2
+  Failed to resolve reference unresolvedroot(Map).Make Couldn't find "Make"
+  File "set.mli", line 189, characters 16-27:
+  Warning: While resolving the expansion of include at File "utils/identifiable.mli", line 38, character 2
+  Failed to resolve reference unresolvedroot(Set).Make Couldn't find "Make"
+  File "parsing/attr_helper.mli", line 19, characters 2-33:
+  Warning: Failed to resolve reference unresolvedroot(Compiler_libs) Couldn't find "Compiler_libs"
+  File "utils/config.mli", line 19, characters 2-33:
+  Warning: Failed to resolve reference unresolvedroot(Compiler_libs) Couldn't find "Compiler_libs"
+  File "parsing/parse.mli", line 19, characters 2-33:
+  Warning: Failed to resolve reference unresolvedroot(Compiler_libs) Couldn't find "Compiler_libs"
+  File "./doc.mld", line 11, characters 15-105:
+  Warning: Failed to resolve reference unresolvedroot(Dynlink_common) Parent_module: Lookup failure (root module): Dynlink_common
+  File "./doc.mld", line 11, characters 15-105:
+  Warning: Failed to resolve reference unresolvedroot(Dynlink_platform_intf) Parent_module: Lookup failure (root module): Dynlink_platform_intf
+  File "./doc.mld", line 11, characters 15-105:
+  Warning: Failed to resolve reference unresolvedroot(Dynlink_types) Parent_module: Lookup failure (root module): Dynlink_types
+  File "./doc.mld", line 11, characters 15-105:
+  Warning: Failed to resolve reference unresolvedroot(Dynlink_compilerlibs) Parent_module: Lookup failure (root module): Dynlink_compilerlibs
+  0 other files to copy
+  dst: linked/p/ocaml-base-compiler/5.0.0/doc/opam
   $ voodoo-gen -o output
   0 other versons, 1 packages
-  Found 2 files
+  Found 340 files
+
+Generates a package.json file
+  $ cat output/p/ocaml-base-compiler/5.0.0/package.json
+  {"libraries":[{"name":"runtime_events","modules":[{"name":"Runtime_events","submodules":[{"name":"Callbacks","submodules":[],"kind":"module"},{"name":"Timestamp","submodules":[],"kind":"module"}],"kind":"module"}]},{"name":"threads","modules":[{"name":"Thread","submodules":[],"kind":"module"},{"name":"Event","submodules":[],"kind":"module"}]},{"name":"dynlink","modules":[{"name":"Dynlink","submodules":[],"kind":"module"}]},{"name":"str","modules":[{"name":"Str","submodules":[],"kind":"module"}]},{"name":"ocamloptcomp","modules":[{"name":"Internal_variable_names","submodules":[],"kind":"module"},{"name":"Linkage_name","submodules":[{"name":"Tbl","submodules":[],"kind":"module"},{"name":"Map","submodules":[],"kind":"module"},{"name":"Set","submodules":[],"kind":"module"},{"name":"T","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Compilation_unit","submodules":[{"name":"Tbl","submodules":[],"kind":"module"},{"name":"Map","submodules":[],"kind":"module"},{"name":"Set","submodules":[],"kind":"module"},{"name":"T","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Variable","submodules":[{"name":"Pair","submodules":[{"name":"Tbl","submodules":[],"kind":"module"},{"name":"Map","submodules":[],"kind":"module"},{"name":"Set","submodules":[],"kind":"module"},{"name":"T","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Tbl","submodules":[],"kind":"module"},{"name":"Map","submodules":[],"kind":"module"},{"name":"Set","submodules":[],"kind":"module"},{"name":"T","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Closure_element","submodules":[{"name":"Tbl","submodules":[],"kind":"module"},{"name":"Map","submodules":[],"kind":"module"},{"name":"Set","submodules":[],"kind":"module"},{"name":"T","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Closure_id","submodules":[{"name":"Tbl","submodules":[],"kind":"module"},{"name":"Map","submodules":[],"kind":"module"},{"name":"Set","submodules":[],"kind":"module"},{"name":"T","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Symbol","submodules":[{"name":"Tbl","submodules":[],"kind":"module"},{"name":"Map","submodules":[],"kind":"module"},{"name":"Set","submodules":[],"kind":"module"},{"name":"T","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Backend_var","submodules":[{"name":"With_provenance","submodules":[],"kind":"module"},{"name":"Provenance","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Clambda_primitives","submodules":[],"kind":"module"},{"name":"Printclambda_primitives","submodules":[],"kind":"module"},{"name":"Clambda","submodules":[],"kind":"module"},{"name":"Printclambda","submodules":[],"kind":"module"},{"name":"Semantics_of_primitives","submodules":[],"kind":"module"},{"name":"Convert_primitives","submodules":[],"kind":"module"},{"name":"Id_types","submodules":[{"name":"UnitId","submodules":[{"name":"Compilation_unit","submodules":[],"kind":"argument-2"},{"name":"_","submodules":[],"kind":"argument-1"},{"name":"Compilation_unit","submodules":[],"kind":"argument-2"}],"kind":"module"},{"name":"Id","submodules":[],"kind":"module"},{"name":"UnitId","submodules":[{"name":"Compilation_unit","submodules":[],"kind":"argument-2"},{"name":"_","submodules":[],"kind":"argument-1"},{"name":"Compilation_unit","submodules":[],"kind":"argument-2"}],"kind":"module"},{"name":"Id","submodules":[],"kind":"module"},{"name":"BaseId","submodules":[],"kind":"module-type"}],"kind":"module"},{"name":"Export_id","submodules":[{"name":"Tbl","submodules":[],"kind":"module"},{"name":"Map","submodules":[],"kind":"module"},{"name":"Set","submodules":[],"kind":"module"},{"name":"T","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Tag","submodules":[{"name":"Tbl","submodules":[],"kind":"module"},{"name":"Map","submodules":[],"kind":"module"},{"name":"Set","submodules":[],"kind":"module"},{"name":"T","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Mutable_variable","submodules":[{"name":"Tbl","submodules":[],"kind":"module"},{"name":"Map","submodules":[],"kind":"module"},{"name":"Set","submodules":[],"kind":"module"},{"name":"T","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Set_of_closures_id","submodules":[{"name":"Tbl","submodules":[],"kind":"module"},{"name":"Map","submodules":[],"kind":"module"},{"name":"Set","submodules":[],"kind":"module"},{"name":"T","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Set_of_closures_origin","submodules":[{"name":"Tbl","submodules":[],"kind":"module"},{"name":"Map","submodules":[],"kind":"module"},{"name":"Set","submodules":[],"kind":"module"},{"name":"T","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Closure_origin","submodules":[{"name":"Tbl","submodules":[],"kind":"module"},{"name":"Map","submodules":[],"kind":"module"},{"name":"Set","submodules":[],"kind":"module"},{"name":"T","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Var_within_closure","submodules":[{"name":"Tbl","submodules":[],"kind":"module"},{"name":"Map","submodules":[],"kind":"module"},{"name":"Set","submodules":[],"kind":"module"},{"name":"T","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Static_exception","submodules":[{"name":"Tbl","submodules":[],"kind":"module"},{"name":"Map","submodules":[],"kind":"module"},{"name":"Set","submodules":[],"kind":"module"},{"name":"T","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Pass_wrapper","submodules":[],"kind":"module"},{"name":"Allocated_const","submodules":[],"kind":"module"},{"name":"Parameter","submodules":[{"name":"List","submodules":[],"kind":"module"},{"name":"Tbl","submodules":[],"kind":"module"},{"name":"Map","submodules":[],"kind":"module"},{"name":"Set","submodules":[],"kind":"module"},{"name":"T","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Projection","submodules":[{"name":"Tbl","submodules":[],"kind":"module"},{"name":"Map","submodules":[],"kind":"module"},{"name":"Set","submodules":[],"kind":"module"},{"name":"T","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Flambda","submodules":[{"name":"With_free_variables","submodules":[],"kind":"module"},{"name":"Constant_defining_value","submodules":[{"name":"Tbl","submodules":[],"kind":"module"},{"name":"Map","submodules":[],"kind":"module"},{"name":"Set","submodules":[],"kind":"module"},{"name":"T","submodules":[],"kind":"module"}],"kind":"module"}],"kind":"module"},{"name":"Flambda_iterators","submodules":[],"kind":"module"},{"name":"Flambda_utils","submodules":[{"name":"Switch_storer","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Freshening","submodules":[{"name":"Project_var","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Effect_analysis","submodules":[],"kind":"module"},{"name":"Inlining_cost","submodules":[{"name":"Whether_sufficient_benefit","submodules":[],"kind":"module"},{"name":"Benefit","submodules":[],"kind":"module"},{"name":"Threshold","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Simple_value_approx","submodules":[],"kind":"module"},{"name":"Export_info","submodules":[],"kind":"module"},{"name":"Export_info_for_pack","submodules":[],"kind":"module"},{"name":"Compilenv","submodules":[],"kind":"module"},{"name":"Closure","submodules":[],"kind":"module"},{"name":"Closure_middle_end","submodules":[],"kind":"module"},{"name":"Import_approx","submodules":[],"kind":"module"},{"name":"Lift_code","submodules":[],"kind":"module"},{"name":"Closure_conversion_aux","submodules":[{"name":"Function_decls","submodules":[{"name":"Function_decl","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Env","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Closure_conversion","submodules":[],"kind":"module"},{"name":"Initialize_symbol_to_let_symbol","submodules":[],"kind":"module"},{"name":"Lift_let_to_initialize_symbol","submodules":[],"kind":"module"},{"name":"Find_recursive_functions","submodules":[],"kind":"module"},{"name":"Invariant_params","submodules":[],"kind":"module"},{"name":"Inconstant_idents","submodules":[],"kind":"module"},{"name":"Alias_analysis","submodules":[],"kind":"module"},{"name":"Lift_constants","submodules":[],"kind":"module"},{"name":"Share_constants","submodules":[],"kind":"module"},{"name":"Simplify_common","submodules":[],"kind":"module"},{"name":"Remove_unused_arguments","submodules":[],"kind":"module"},{"name":"Remove_unused_closure_vars","submodules":[],"kind":"module"},{"name":"Remove_unused_program_constructs","submodules":[],"kind":"module"},{"name":"Simplify_boxed_integer_ops","submodules":[{"name":"Simplify_boxed_int64","submodules":[],"kind":"module"},{"name":"Simplify_boxed_int32","submodules":[],"kind":"module"},{"name":"Simplify_boxed_nativeint","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Simplify_primitives","submodules":[],"kind":"module"},{"name":"Inlining_stats_types","submodules":[{"name":"Decision","submodules":[],"kind":"module"},{"name":"Prevented","submodules":[],"kind":"module"},{"name":"Not_specialised","submodules":[],"kind":"module"},{"name":"Specialised","submodules":[],"kind":"module"},{"name":"Not_inlined","submodules":[],"kind":"module"},{"name":"Inlined","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Inlining_stats","submodules":[{"name":"Closure_stack","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Inline_and_simplify_aux","submodules":[{"name":"Result","submodules":[],"kind":"module"},{"name":"Env","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Remove_free_vars_equal_to_args","submodules":[],"kind":"module"},{"name":"Extract_projections","submodules":[],"kind":"module"},{"name":"Augment_specialised_args","submodules":[{"name":"Make","submodules":[{"name":"_","submodules":[],"kind":"argument-1"}],"kind":"module"},{"name":"S","submodules":[],"kind":"module-type"},{"name":"What_to_specialise","submodules":[],"kind":"module"},{"name":"Definition","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Unbox_free_vars_of_closures","submodules":[],"kind":"module"},{"name":"Unbox_specialised_args","submodules":[],"kind":"module"},{"name":"Unbox_closures","submodules":[],"kind":"module"},{"name":"Inlining_transforms","submodules":[],"kind":"module"},{"name":"Inlining_decision","submodules":[],"kind":"module"},{"name":"Inline_and_simplify","submodules":[],"kind":"module"},{"name":"Ref_to_variables","submodules":[],"kind":"module"},{"name":"Flambda_invariants","submodules":[],"kind":"module"},{"name":"Traverse_for_exported_symbols","submodules":[],"kind":"module"},{"name":"Build_export_info","submodules":[],"kind":"module"},{"name":"Closure_offsets","submodules":[],"kind":"module"},{"name":"Un_anf","submodules":[],"kind":"module"},{"name":"Flambda_to_clambda","submodules":[],"kind":"module"},{"name":"Flambda_middle_end","submodules":[],"kind":"module"},{"name":"X86_proc","submodules":[],"kind":"module"},{"name":"X86_dsl","submodules":[{"name":"I","submodules":[],"kind":"module"},{"name":"D","submodules":[],"kind":"module"}],"kind":"module"},{"name":"X86_gas","submodules":[],"kind":"module"},{"name":"X86_masm","submodules":[],"kind":"module"},{"name":"Arch","submodules":[],"kind":"module"},{"name":"Cmm","submodules":[],"kind":"module"},{"name":"Printcmm","submodules":[],"kind":"module"},{"name":"Reg","submodules":[{"name":"Map","submodules":[],"kind":"module"},{"name":"Set","submodules":[],"kind":"module"},{"name":"Raw_name","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Mach","submodules":[],"kind":"module"},{"name":"Proc","submodules":[],"kind":"module"},{"name":"Afl_instrument","submodules":[],"kind":"module"},{"name":"Strmatch","submodules":[{"name":"Make","submodules":[{"name":"_","submodules":[],"kind":"argument-1"}],"kind":"module"},{"name":"I","submodules":[],"kind":"module-type"}],"kind":"module"},{"name":"Cmmgen_state","submodules":[],"kind":"module"},{"name":"Cmm_helpers","submodules":[],"kind":"module"},{"name":"Cmmgen","submodules":[],"kind":"module"},{"name":"Cmm_invariants","submodules":[],"kind":"module"},{"name":"Interval","submodules":[],"kind":"module"},{"name":"Printmach","submodules":[],"kind":"module"},{"name":"Dataflow","submodules":[{"name":"Backward","submodules":[{"name":"D","submodules":[],"kind":"argument-1"}],"kind":"module"},{"name":"DOMAIN","submodules":[],"kind":"module-type"}],"kind":"module"},{"name":"Polling","submodules":[],"kind":"module"},{"name":"Selectgen","submodules":[{"name":"selector_generic","submodules":[],"kind":"class"},{"name":"Effect_and_coeffect","submodules":[],"kind":"module"},{"name":"Coeffect","submodules":[],"kind":"module"},{"name":"Effect","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Selection","submodules":[],"kind":"module"},{"name":"Comballoc","submodules":[],"kind":"module"},{"name":"CSEgen","submodules":[{"name":"cse_generic","submodules":[],"kind":"class"}],"kind":"module"},{"name":"CSE","submodules":[{"name":"cse","submodules":[],"kind":"class"}],"kind":"module"},{"name":"Liveness","submodules":[],"kind":"module"},{"name":"Spill","submodules":[],"kind":"module"},{"name":"Split","submodules":[],"kind":"module"},{"name":"Interf","submodules":[],"kind":"module"},{"name":"Coloring","submodules":[],"kind":"module"},{"name":"Linscan","submodules":[],"kind":"module"},{"name":"Reloadgen","submodules":[{"name":"reload_generic","submodules":[],"kind":"class"}],"kind":"module"},{"name":"Reload","submodules":[],"kind":"module"},{"name":"Deadcode","submodules":[],"kind":"module"},{"name":"Linear","submodules":[],"kind":"module"},{"name":"Printlinear","submodules":[],"kind":"module"},{"name":"Linearize","submodules":[],"kind":"module"},{"name":"Linear_format","submodules":[],"kind":"module"},{"name":"Schedgen","submodules":[{"name":"scheduler_generic","submodules":[],"kind":"class"}],"kind":"module"},{"name":"Scheduling","submodules":[],"kind":"module"},{"name":"Branch_relaxation_intf","submodules":[{"name":"S","submodules":[{"name":"Cond_branch","submodules":[],"kind":"module"}],"kind":"module-type"}],"kind":"module"},{"name":"Branch_relaxation","submodules":[{"name":"Make","submodules":[{"name":"T","submodules":[{"name":"Cond_branch","submodules":[],"kind":"module"}],"kind":"argument-1"}],"kind":"module"}],"kind":"module"},{"name":"Emitaux","submodules":[],"kind":"module"},{"name":"Emit","submodules":[],"kind":"module"},{"name":"Asmgen","submodules":[],"kind":"module"},{"name":"Asmlink","submodules":[],"kind":"module"},{"name":"Asmlibrarian","submodules":[],"kind":"module"},{"name":"Asmpackager","submodules":[],"kind":"module"},{"name":"Opterrors","submodules":[],"kind":"module"},{"name":"Optcompile","submodules":[],"kind":"module"},{"name":"Optmaindriver","submodules":[],"kind":"module"}]},{"name":"ocamlcommon","modules":[{"name":"Config","submodules":[],"kind":"module"},{"name":"Build_path_prefix_map","submodules":[],"kind":"module"},{"name":"Misc","submodules":[{"name":"Magic_number","submodules":[],"kind":"module"},{"name":"Error_style","submodules":[],"kind":"module"},{"name":"Color","submodules":[],"kind":"module"},{"name":"LongString","submodules":[],"kind":"module"},{"name":"Int_literal_converter","submodules":[],"kind":"module"},{"name":"Stdlib","submodules":[{"name":"String","submodules":[{"name":"Tbl","submodules":[],"kind":"module"},{"name":"Map","submodules":[],"kind":"module"},{"name":"Set","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Array","submodules":[],"kind":"module"},{"name":"Option","submodules":[],"kind":"module"},{"name":"List","submodules":[],"kind":"module"}],"kind":"module"}],"kind":"module"},{"name":"Identifiable","submodules":[{"name":"Make","submodules":[{"name":"Tbl","submodules":[],"kind":"module"},{"name":"Map","submodules":[],"kind":"module"},{"name":"Set","submodules":[],"kind":"module"},{"name":"T","submodules":[],"kind":"module"},{"name":"T","submodules":[],"kind":"module"}],"kind":"module"},{"name":"S","submodules":[{"name":"Tbl","submodules":[],"kind":"module"},{"name":"Map","submodules":[],"kind":"module"},{"name":"Set","submodules":[],"kind":"module"},{"name":"T","submodules":[],"kind":"module"}],"kind":"module-type"},{"name":"Tbl","submodules":[{"name":"T","submodules":[],"kind":"module"}],"kind":"module-type"},{"name":"Map","submodules":[{"name":"T","submodules":[],"kind":"module"}],"kind":"module-type"},{"name":"Set","submodules":[{"name":"T","submodules":[],"kind":"module"}],"kind":"module-type"},{"name":"Pair","submodules":[{"name":"B","submodules":[],"kind":"argument-2"},{"name":"A","submodules":[],"kind":"argument-1"}],"kind":"module"},{"name":"Thing","submodules":[],"kind":"module-type"}],"kind":"module"},{"name":"Numbers","submodules":[{"name":"Float","submodules":[{"name":"Tbl","submodules":[],"kind":"module"},{"name":"Map","submodules":[],"kind":"module"},{"name":"Set","submodules":[],"kind":"module"},{"name":"T","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Int16","submodules":[],"kind":"module"},{"name":"Int8","submodules":[],"kind":"module"},{"name":"Int","submodules":[{"name":"Tbl","submodules":[],"kind":"module"},{"name":"Map","submodules":[],"kind":"module"},{"name":"Set","submodules":[],"kind":"module"},{"name":"T","submodules":[],"kind":"module"}],"kind":"module"}],"kind":"module"},{"name":"Arg_helper","submodules":[{"name":"Make","submodules":[{"name":"S","submodules":[{"name":"Value","submodules":[],"kind":"module"},{"name":"Key","submodules":[{"name":"Map","submodules":[],"kind":"module"}],"kind":"module"}],"kind":"argument-1"}],"kind":"module"}],"kind":"module"},{"name":"Local_store","submodules":[],"kind":"module"},{"name":"Load_path","submodules":[{"name":"Dir","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Clflags","submodules":[{"name":"Compiler_pass","submodules":[],"kind":"module"},{"name":"Float_arg_helper","submodules":[],"kind":"module"},{"name":"Int_arg_helper","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Profile","submodules":[],"kind":"module"},{"name":"Terminfo","submodules":[],"kind":"module"},{"name":"Ccomp","submodules":[],"kind":"module"},{"name":"Warnings","submodules":[],"kind":"module"},{"name":"Consistbl","submodules":[{"name":"Make","submodules":[{"name":"Module_name","submodules":[{"name":"Tbl","submodules":[],"kind":"module"},{"name":"Map","submodules":[],"kind":"module"},{"name":"Set","submodules":[],"kind":"module"}],"kind":"argument-1"}],"kind":"module"}],"kind":"module"},{"name":"Strongly_connected_components","submodules":[{"name":"Make","submodules":[{"name":"Id","submodules":[{"name":"Tbl","submodules":[],"kind":"module"},{"name":"Map","submodules":[],"kind":"module"},{"name":"Set","submodules":[],"kind":"module"},{"name":"T","submodules":[],"kind":"module"}],"kind":"argument-1"}],"kind":"module"},{"name":"S","submodules":[{"name":"Id","submodules":[{"name":"Tbl","submodules":[],"kind":"module"},{"name":"Map","submodules":[],"kind":"module"},{"name":"Set","submodules":[],"kind":"module"},{"name":"T","submodules":[],"kind":"module"}],"kind":"module"}],"kind":"module-type"}],"kind":"module"},{"name":"Targetint","submodules":[],"kind":"module"},{"name":"Int_replace_polymorphic_compare","submodules":[],"kind":"module"},{"name":"Domainstate","submodules":[],"kind":"module"},{"name":"Binutils","submodules":[],"kind":"module"},{"name":"Lazy_backtrack","submodules":[],"kind":"module"},{"name":"Diffing","submodules":[{"name":"Define","submodules":[{"name":"Right_variadic","submodules":[{"name":"_","submodules":[],"kind":"argument-1"}],"kind":"module"},{"name":"Left_variadic","submodules":[{"name":"_","submodules":[],"kind":"argument-1"}],"kind":"module"},{"name":"Simple","submodules":[{"name":"_","submodules":[],"kind":"argument-1"}],"kind":"module"},{"name":"S","submodules":[],"kind":"module-type"},{"name":"Parameters","submodules":[],"kind":"module-type"},{"name":"D","submodules":[],"kind":"argument-1"}],"kind":"module"},{"name":"Defs","submodules":[],"kind":"module-type"}],"kind":"module"},{"name":"Diffing_with_keys","submodules":[{"name":"Define","submodules":[{"name":"Simple","submodules":[{"name":"_","submodules":[],"kind":"argument-1"}],"kind":"module"},{"name":"Parameters","submodules":[],"kind":"module-type"},{"name":"D","submodules":[],"kind":"argument-1"}],"kind":"module"}],"kind":"module"},{"name":"Location","submodules":[],"kind":"module"},{"name":"Longident","submodules":[],"kind":"module"},{"name":"Docstrings","submodules":[{"name":"WithMenhir","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Syntaxerr","submodules":[],"kind":"module"},{"name":"Ast_helper","submodules":[{"name":"Of","submodules":[],"kind":"module"},{"name":"Rf","submodules":[],"kind":"module"},{"name":"Cstr","submodules":[],"kind":"module"},{"name":"Csig","submodules":[],"kind":"module"},{"name":"Ci","submodules":[],"kind":"module"},{"name":"Cf","submodules":[],"kind":"module"},{"name":"Cl","submodules":[],"kind":"module"},{"name":"Ctf","submodules":[],"kind":"module"},{"name":"Cty","submodules":[],"kind":"module"},{"name":"Vb","submodules":[],"kind":"module"},{"name":"Incl","submodules":[],"kind":"module"},{"name":"Opn","submodules":[],"kind":"module"},{"name":"Mb","submodules":[],"kind":"module"},{"name":"Mtd","submodules":[],"kind":"module"},{"name":"Ms","submodules":[],"kind":"module"},{"name":"Md","submodules":[],"kind":"module"},{"name":"Str","submodules":[],"kind":"module"},{"name":"Sig","submodules":[],"kind":"module"},{"name":"Mod","submodules":[],"kind":"module"},{"name":"Mty","submodules":[],"kind":"module"},{"name":"Te","submodules":[],"kind":"module"},{"name":"Type","submodules":[],"kind":"module"},{"name":"Val","submodules":[],"kind":"module"},{"name":"Exp","submodules":[],"kind":"module"},{"name":"Pat","submodules":[],"kind":"module"},{"name":"Typ","submodules":[],"kind":"module"},{"name":"Attr","submodules":[],"kind":"module"},{"name":"Const","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Pprintast","submodules":[],"kind":"module"},{"name":"CamlinternalMenhirLib","submodules":[{"name":"StaticVersion","submodules":[],"kind":"module"},{"name":"TableInterpreter","submodules":[{"name":"MakeEngineTable","submodules":[{"name":"Log","submodules":[],"kind":"module"},{"name":"T","submodules":[],"kind":"argument-1"}],"kind":"module"}],"kind":"module"},{"name":"InspectionTableInterpreter","submodules":[{"name":"Make","submodules":[{"name":"E","submodules":[],"kind":"argument-4"},{"name":"ET","submodules":[{"name":"Log","submodules":[],"kind":"module"}],"kind":"argument-3"},{"name":"IT","submodules":[],"kind":"argument-2"},{"name":"TT","submodules":[],"kind":"argument-1"}],"kind":"module"},{"name":"Symbols","submodules":[{"name":"T","submodules":[],"kind":"argument-1"}],"kind":"module"}],"kind":"module"},{"name":"InspectionTableFormat","submodules":[{"name":"TABLES","submodules":[],"kind":"module-type"}],"kind":"module"},{"name":"TableFormat","submodules":[{"name":"TABLES","submodules":[],"kind":"module-type"}],"kind":"module"},{"name":"LinearizedArray","submodules":[],"kind":"module"},{"name":"RowDisplacement","submodules":[],"kind":"module"},{"name":"PackedIntArray","submodules":[],"kind":"module"},{"name":"InfiniteArray","submodules":[],"kind":"module"},{"name":"Printers","submodules":[{"name":"Make","submodules":[{"name":"User","submodules":[],"kind":"argument-2"},{"name":"I","submodules":[],"kind":"argument-1"}],"kind":"module"}],"kind":"module"},{"name":"LexerUtil","submodules":[],"kind":"module"},{"name":"ErrorReports","submodules":[],"kind":"module"},{"name":"Engine","submodules":[{"name":"Make","submodules":[{"name":"T","submodules":[{"name":"Log","submodules":[],"kind":"module"}],"kind":"argument-1"}],"kind":"module"}],"kind":"module"},{"name":"EngineTypes","submodules":[{"name":"ENGINE","submodules":[],"kind":"module-type"},{"name":"INCREMENTAL_ENGINE_START","submodules":[],"kind":"module-type"},{"name":"MONOLITHIC_ENGINE","submodules":[],"kind":"module-type"},{"name":"TABLE","submodules":[{"name":"Log","submodules":[],"kind":"module"}],"kind":"module-type"}],"kind":"module"},{"name":"IncrementalEngine","submodules":[{"name":"EVERYTHING","submodules":[],"kind":"module-type"},{"name":"INSPECTION","submodules":[],"kind":"module-type"},{"name":"SYMBOLS","submodules":[],"kind":"module-type"},{"name":"INCREMENTAL_ENGINE","submodules":[],"kind":"module-type"}],"kind":"module"},{"name":"Convert","submodules":[{"name":"Simplified","submodules":[],"kind":"module"}],"kind":"module"},{"name":"General","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Parser","submodules":[{"name":"Incremental","submodules":[],"kind":"module"},{"name":"MenhirInterpreter","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Lexer","submodules":[],"kind":"module"},{"name":"Parse","submodules":[],"kind":"module"},{"name":"Printast","submodules":[],"kind":"module"},{"name":"Ast_mapper","submodules":[],"kind":"module"},{"name":"Ast_iterator","submodules":[],"kind":"module"},{"name":"Attr_helper","submodules":[],"kind":"module"},{"name":"Builtin_attributes","submodules":[],"kind":"module"},{"name":"Ast_invariants","submodules":[],"kind":"module"},{"name":"Depend","submodules":[],"kind":"module"},{"name":"Ident","submodules":[{"name":"Tbl","submodules":[],"kind":"module"},{"name":"Map","submodules":[],"kind":"module"},{"name":"Set","submodules":[],"kind":"module"},{"name":"T","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Path","submodules":[{"name":"Set","submodules":[],"kind":"module"},{"name":"Map","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Primitive","submodules":[],"kind":"module"},{"name":"Type_immediacy","submodules":[{"name":"Violation","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Shape","submodules":[{"name":"Make_reduce","submodules":[{"name":"Context","submodules":[],"kind":"argument-1"}],"kind":"module"},{"name":"Map","submodules":[],"kind":"module"},{"name":"Item","submodules":[{"name":"Map","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Sig_component_kind","submodules":[],"kind":"module"},{"name":"Uid","submodules":[{"name":"Tbl","submodules":[],"kind":"module"},{"name":"Map","submodules":[],"kind":"module"},{"name":"Set","submodules":[],"kind":"module"},{"name":"T","submodules":[],"kind":"module"}],"kind":"module"}],"kind":"module"},{"name":"Types","submodules":[{"name":"Separability","submodules":[],"kind":"module"},{"name":"Variance","submodules":[],"kind":"module"},{"name":"Vars","submodules":[],"kind":"module"},{"name":"Meths","submodules":[],"kind":"module"},{"name":"VarSet","submodules":[],"kind":"module"},{"name":"MethSet","submodules":[],"kind":"module"},{"name":"TransientTypeOps","submodules":[],"kind":"module"},{"name":"Transient_expr","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Btype","submodules":[{"name":"For_copy","submodules":[],"kind":"module"},{"name":"TypePairs","submodules":[],"kind":"module"},{"name":"TypeHash","submodules":[],"kind":"module"},{"name":"TypeMap","submodules":[],"kind":"module"},{"name":"TransientTypeMap","submodules":[],"kind":"module"},{"name":"TypeSet","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Oprint","submodules":[],"kind":"module"},{"name":"Subst","submodules":[{"name":"Lazy","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Predef","submodules":[],"kind":"module"},{"name":"Datarepr","submodules":[],"kind":"module"},{"name":"Cmi_format","submodules":[],"kind":"module"},{"name":"Persistent_env","submodules":[{"name":"Persistent_signature","submodules":[],"kind":"module"},{"name":"Consistbl","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Env","submodules":[],"kind":"module"},{"name":"Errortrace","submodules":[{"name":"Subtype","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Typedtree","submodules":[],"kind":"module"},{"name":"Signature_group","submodules":[],"kind":"module"},{"name":"Printtyped","submodules":[],"kind":"module"},{"name":"Ctype","submodules":[],"kind":"module"},{"name":"Printtyp","submodules":[{"name":"Subtype","submodules":[],"kind":"module"},{"name":"Conflicts","submodules":[],"kind":"module"},{"name":"Naming_context","submodules":[],"kind":"module"},{"name":"Out_name","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Includeclass","submodules":[],"kind":"module"},{"name":"Mtype","submodules":[],"kind":"module"},{"name":"Envaux","submodules":[],"kind":"module"},{"name":"Includecore","submodules":[],"kind":"module"},{"name":"Tast_iterator","submodules":[],"kind":"module"},{"name":"Tast_mapper","submodules":[],"kind":"module"},{"name":"Stypes","submodules":[],"kind":"module"},{"name":"Cmt_format","submodules":[],"kind":"module"},{"name":"Cmt2annot","submodules":[],"kind":"module"},{"name":"Untypeast","submodules":[],"kind":"module"},{"name":"Includemod","submodules":[{"name":"Functor_app_diff","submodules":[{"name":"Defs","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Functor_inclusion_diff","submodules":[{"name":"Defs","submodules":[],"kind":"module"}],"kind":"module"},{"name":"FieldMap","submodules":[],"kind":"module"},{"name":"Error","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Includemod_errorprinter","submodules":[],"kind":"module"},{"name":"Typetexp","submodules":[],"kind":"module"},{"name":"Printpat","submodules":[],"kind":"module"},{"name":"Patterns","submodules":[{"name":"Head","submodules":[],"kind":"module"},{"name":"General","submodules":[],"kind":"module"},{"name":"Half_simple","submodules":[],"kind":"module"},{"name":"Simple","submodules":[],"kind":"module"},{"name":"Non_empty_row","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Parmatch","submodules":[{"name":"Compat","submodules":[{"name":"_","submodules":[],"kind":"argument-1"}],"kind":"module"}],"kind":"module"},{"name":"Typedecl_properties","submodules":[],"kind":"module"},{"name":"Typedecl_variance","submodules":[],"kind":"module"},{"name":"Typedecl_unboxed","submodules":[],"kind":"module"},{"name":"Typedecl_immediacy","submodules":[],"kind":"module"},{"name":"Typedecl_separability","submodules":[],"kind":"module"},{"name":"Typedecl","submodules":[],"kind":"module"},{"name":"Typeopt","submodules":[],"kind":"module"},{"name":"Rec_check","submodules":[],"kind":"module"},{"name":"Typecore","submodules":[{"name":"Datatype_kind","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Typeclass","submodules":[],"kind":"module"},{"name":"Typemod","submodules":[{"name":"Sig_component_kind","submodules":[],"kind":"module"},{"name":"Signature_names","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Debuginfo","submodules":[{"name":"Scoped_location","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Lambda","submodules":[],"kind":"module"},{"name":"Printlambda","submodules":[],"kind":"module"},{"name":"Switch","submodules":[{"name":"Make","submodules":[{"name":"Arg","submodules":[],"kind":"argument-1"}],"kind":"module"},{"name":"S","submodules":[],"kind":"module-type"},{"name":"Store","submodules":[{"name":"A","submodules":[],"kind":"argument-1"}],"kind":"module"},{"name":"CtxStore","submodules":[{"name":"A","submodules":[],"kind":"argument-1"}],"kind":"module"},{"name":"CtxStored","submodules":[],"kind":"module-type"},{"name":"Stored","submodules":[],"kind":"module-type"}],"kind":"module"},{"name":"Matching","submodules":[],"kind":"module"},{"name":"Translobj","submodules":[],"kind":"module"},{"name":"Translattribute","submodules":[],"kind":"module"},{"name":"Translprim","submodules":[],"kind":"module"},{"name":"Translcore","submodules":[],"kind":"module"},{"name":"Translclass","submodules":[],"kind":"module"},{"name":"Translmod","submodules":[],"kind":"module"},{"name":"Tmc","submodules":[],"kind":"module"},{"name":"Simplif","submodules":[],"kind":"module"},{"name":"Runtimedef","submodules":[],"kind":"module"},{"name":"Meta","submodules":[],"kind":"module"},{"name":"Opcodes","submodules":[],"kind":"module"},{"name":"Bytesections","submodules":[],"kind":"module"},{"name":"Dll","submodules":[],"kind":"module"},{"name":"Symtable","submodules":[],"kind":"module"},{"name":"Pparse","submodules":[],"kind":"module"},{"name":"Compenv","submodules":[],"kind":"module"},{"name":"Main_args","submodules":[{"name":"Default","submodules":[{"name":"Odoc_args","submodules":[],"kind":"module"},{"name":"Optmain","submodules":[],"kind":"module"},{"name":"Main","submodules":[],"kind":"module"},{"name":"Opttopmain","submodules":[],"kind":"module"},{"name":"Topmain","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Make_ocamldoc_options","submodules":[{"name":"_","submodules":[],"kind":"argument-1"}],"kind":"module"},{"name":"Make_opttop_options","submodules":[{"name":"_","submodules":[],"kind":"argument-1"}],"kind":"module"},{"name":"Make_optcomp_options","submodules":[{"name":"_","submodules":[],"kind":"argument-1"}],"kind":"module"},{"name":"Make_bytetop_options","submodules":[{"name":"_","submodules":[],"kind":"argument-1"}],"kind":"module"},{"name":"Make_bytecomp_options","submodules":[{"name":"_","submodules":[],"kind":"argument-1"}],"kind":"module"},{"name":"Arg_list","submodules":[],"kind":"module-type"},{"name":"Ocamldoc_options","submodules":[],"kind":"module-type"},{"name":"Opttop_options","submodules":[],"kind":"module-type"},{"name":"Optcomp_options","submodules":[],"kind":"module-type"},{"name":"Optcommon_options","submodules":[],"kind":"module-type"},{"name":"Bytetop_options","submodules":[],"kind":"module-type"},{"name":"Bytecomp_options","submodules":[],"kind":"module-type"},{"name":"Toplevel_options","submodules":[],"kind":"module-type"},{"name":"Compiler_options","submodules":[],"kind":"module-type"},{"name":"Core_options","submodules":[],"kind":"module-type"},{"name":"Common_options","submodules":[],"kind":"module-type"}],"kind":"module"},{"name":"Compmisc","submodules":[],"kind":"module"},{"name":"Makedepend","submodules":[],"kind":"module"},{"name":"Compile_common","submodules":[],"kind":"module"}]},{"name":"ocamltoplevel","modules":[{"name":"Genprintval","submodules":[{"name":"Make","submodules":[{"name":"_","submodules":[],"kind":"argument-2"},{"name":"O","submodules":[],"kind":"argument-1"}],"kind":"module"},{"name":"S","submodules":[],"kind":"module-type"},{"name":"EVALPATH","submodules":[],"kind":"module-type"},{"name":"OBJ","submodules":[],"kind":"module-type"}],"kind":"module"},{"name":"Topcommon","submodules":[],"kind":"module"},{"name":"Topeval","submodules":[],"kind":"module"},{"name":"Trace","submodules":[],"kind":"module"},{"name":"Toploop","submodules":[],"kind":"module"},{"name":"Topdirs","submodules":[],"kind":"module"},{"name":"Topmain","submodules":[],"kind":"module"}]},{"name":"ocamlmiddleend","modules":[{"name":"Internal_variable_names","submodules":[],"kind":"module"},{"name":"Linkage_name","submodules":[{"name":"Tbl","submodules":[],"kind":"module"},{"name":"Map","submodules":[],"kind":"module"},{"name":"Set","submodules":[],"kind":"module"},{"name":"T","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Compilation_unit","submodules":[{"name":"Tbl","submodules":[],"kind":"module"},{"name":"Map","submodules":[],"kind":"module"},{"name":"Set","submodules":[],"kind":"module"},{"name":"T","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Variable","submodules":[{"name":"Pair","submodules":[{"name":"Tbl","submodules":[],"kind":"module"},{"name":"Map","submodules":[],"kind":"module"},{"name":"Set","submodules":[],"kind":"module"},{"name":"T","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Tbl","submodules":[],"kind":"module"},{"name":"Map","submodules":[],"kind":"module"},{"name":"Set","submodules":[],"kind":"module"},{"name":"T","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Closure_element","submodules":[{"name":"Tbl","submodules":[],"kind":"module"},{"name":"Map","submodules":[],"kind":"module"},{"name":"Set","submodules":[],"kind":"module"},{"name":"T","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Closure_id","submodules":[{"name":"Tbl","submodules":[],"kind":"module"},{"name":"Map","submodules":[],"kind":"module"},{"name":"Set","submodules":[],"kind":"module"},{"name":"T","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Symbol","submodules":[{"name":"Tbl","submodules":[],"kind":"module"},{"name":"Map","submodules":[],"kind":"module"},{"name":"Set","submodules":[],"kind":"module"},{"name":"T","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Backend_var","submodules":[{"name":"With_provenance","submodules":[],"kind":"module"},{"name":"Provenance","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Clambda_primitives","submodules":[],"kind":"module"},{"name":"Printclambda_primitives","submodules":[],"kind":"module"},{"name":"Clambda","submodules":[],"kind":"module"},{"name":"Printclambda","submodules":[],"kind":"module"},{"name":"Semantics_of_primitives","submodules":[],"kind":"module"},{"name":"Convert_primitives","submodules":[],"kind":"module"},{"name":"Id_types","submodules":[{"name":"UnitId","submodules":[{"name":"Compilation_unit","submodules":[],"kind":"argument-2"},{"name":"_","submodules":[],"kind":"argument-1"},{"name":"Compilation_unit","submodules":[],"kind":"argument-2"}],"kind":"module"},{"name":"Id","submodules":[],"kind":"module"},{"name":"UnitId","submodules":[{"name":"Compilation_unit","submodules":[],"kind":"argument-2"},{"name":"_","submodules":[],"kind":"argument-1"},{"name":"Compilation_unit","submodules":[],"kind":"argument-2"}],"kind":"module"},{"name":"Id","submodules":[],"kind":"module"},{"name":"BaseId","submodules":[],"kind":"module-type"}],"kind":"module"},{"name":"Export_id","submodules":[{"name":"Tbl","submodules":[],"kind":"module"},{"name":"Map","submodules":[],"kind":"module"},{"name":"Set","submodules":[],"kind":"module"},{"name":"T","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Tag","submodules":[{"name":"Tbl","submodules":[],"kind":"module"},{"name":"Map","submodules":[],"kind":"module"},{"name":"Set","submodules":[],"kind":"module"},{"name":"T","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Mutable_variable","submodules":[{"name":"Tbl","submodules":[],"kind":"module"},{"name":"Map","submodules":[],"kind":"module"},{"name":"Set","submodules":[],"kind":"module"},{"name":"T","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Set_of_closures_id","submodules":[{"name":"Tbl","submodules":[],"kind":"module"},{"name":"Map","submodules":[],"kind":"module"},{"name":"Set","submodules":[],"kind":"module"},{"name":"T","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Set_of_closures_origin","submodules":[{"name":"Tbl","submodules":[],"kind":"module"},{"name":"Map","submodules":[],"kind":"module"},{"name":"Set","submodules":[],"kind":"module"},{"name":"T","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Closure_origin","submodules":[{"name":"Tbl","submodules":[],"kind":"module"},{"name":"Map","submodules":[],"kind":"module"},{"name":"Set","submodules":[],"kind":"module"},{"name":"T","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Var_within_closure","submodules":[{"name":"Tbl","submodules":[],"kind":"module"},{"name":"Map","submodules":[],"kind":"module"},{"name":"Set","submodules":[],"kind":"module"},{"name":"T","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Static_exception","submodules":[{"name":"Tbl","submodules":[],"kind":"module"},{"name":"Map","submodules":[],"kind":"module"},{"name":"Set","submodules":[],"kind":"module"},{"name":"T","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Pass_wrapper","submodules":[],"kind":"module"},{"name":"Allocated_const","submodules":[],"kind":"module"},{"name":"Parameter","submodules":[{"name":"List","submodules":[],"kind":"module"},{"name":"Tbl","submodules":[],"kind":"module"},{"name":"Map","submodules":[],"kind":"module"},{"name":"Set","submodules":[],"kind":"module"},{"name":"T","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Projection","submodules":[{"name":"Tbl","submodules":[],"kind":"module"},{"name":"Map","submodules":[],"kind":"module"},{"name":"Set","submodules":[],"kind":"module"},{"name":"T","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Flambda","submodules":[{"name":"With_free_variables","submodules":[],"kind":"module"},{"name":"Constant_defining_value","submodules":[{"name":"Tbl","submodules":[],"kind":"module"},{"name":"Map","submodules":[],"kind":"module"},{"name":"Set","submodules":[],"kind":"module"},{"name":"T","submodules":[],"kind":"module"}],"kind":"module"}],"kind":"module"},{"name":"Flambda_iterators","submodules":[],"kind":"module"},{"name":"Flambda_utils","submodules":[{"name":"Switch_storer","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Freshening","submodules":[{"name":"Project_var","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Effect_analysis","submodules":[],"kind":"module"},{"name":"Inlining_cost","submodules":[{"name":"Whether_sufficient_benefit","submodules":[],"kind":"module"},{"name":"Benefit","submodules":[],"kind":"module"},{"name":"Threshold","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Simple_value_approx","submodules":[],"kind":"module"},{"name":"Export_info","submodules":[],"kind":"module"},{"name":"Export_info_for_pack","submodules":[],"kind":"module"},{"name":"Compilenv","submodules":[],"kind":"module"},{"name":"Closure","submodules":[],"kind":"module"},{"name":"Closure_middle_end","submodules":[],"kind":"module"},{"name":"Import_approx","submodules":[],"kind":"module"},{"name":"Lift_code","submodules":[],"kind":"module"},{"name":"Closure_conversion_aux","submodules":[{"name":"Function_decls","submodules":[{"name":"Function_decl","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Env","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Closure_conversion","submodules":[],"kind":"module"},{"name":"Initialize_symbol_to_let_symbol","submodules":[],"kind":"module"},{"name":"Lift_let_to_initialize_symbol","submodules":[],"kind":"module"},{"name":"Find_recursive_functions","submodules":[],"kind":"module"},{"name":"Invariant_params","submodules":[],"kind":"module"},{"name":"Inconstant_idents","submodules":[],"kind":"module"},{"name":"Alias_analysis","submodules":[],"kind":"module"},{"name":"Lift_constants","submodules":[],"kind":"module"},{"name":"Share_constants","submodules":[],"kind":"module"},{"name":"Simplify_common","submodules":[],"kind":"module"},{"name":"Remove_unused_arguments","submodules":[],"kind":"module"},{"name":"Remove_unused_closure_vars","submodules":[],"kind":"module"},{"name":"Remove_unused_program_constructs","submodules":[],"kind":"module"},{"name":"Simplify_boxed_integer_ops","submodules":[{"name":"Simplify_boxed_int64","submodules":[],"kind":"module"},{"name":"Simplify_boxed_int32","submodules":[],"kind":"module"},{"name":"Simplify_boxed_nativeint","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Simplify_primitives","submodules":[],"kind":"module"},{"name":"Inlining_stats_types","submodules":[{"name":"Decision","submodules":[],"kind":"module"},{"name":"Prevented","submodules":[],"kind":"module"},{"name":"Not_specialised","submodules":[],"kind":"module"},{"name":"Specialised","submodules":[],"kind":"module"},{"name":"Not_inlined","submodules":[],"kind":"module"},{"name":"Inlined","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Inlining_stats","submodules":[{"name":"Closure_stack","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Inline_and_simplify_aux","submodules":[{"name":"Result","submodules":[],"kind":"module"},{"name":"Env","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Remove_free_vars_equal_to_args","submodules":[],"kind":"module"},{"name":"Extract_projections","submodules":[],"kind":"module"},{"name":"Augment_specialised_args","submodules":[{"name":"Make","submodules":[{"name":"_","submodules":[],"kind":"argument-1"}],"kind":"module"},{"name":"S","submodules":[],"kind":"module-type"},{"name":"What_to_specialise","submodules":[],"kind":"module"},{"name":"Definition","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Unbox_free_vars_of_closures","submodules":[],"kind":"module"},{"name":"Unbox_specialised_args","submodules":[],"kind":"module"},{"name":"Unbox_closures","submodules":[],"kind":"module"},{"name":"Inlining_transforms","submodules":[],"kind":"module"},{"name":"Inlining_decision","submodules":[],"kind":"module"},{"name":"Inline_and_simplify","submodules":[],"kind":"module"},{"name":"Ref_to_variables","submodules":[],"kind":"module"},{"name":"Flambda_invariants","submodules":[],"kind":"module"},{"name":"Traverse_for_exported_symbols","submodules":[],"kind":"module"},{"name":"Build_export_info","submodules":[],"kind":"module"},{"name":"Closure_offsets","submodules":[],"kind":"module"},{"name":"Un_anf","submodules":[],"kind":"module"},{"name":"Flambda_to_clambda","submodules":[],"kind":"module"},{"name":"Flambda_middle_end","submodules":[],"kind":"module"}]},{"name":"ocamlbytecomp","modules":[{"name":"Instruct","submodules":[],"kind":"module"},{"name":"Bytegen","submodules":[],"kind":"module"},{"name":"Printinstr","submodules":[],"kind":"module"},{"name":"Emitcode","submodules":[],"kind":"module"},{"name":"Bytelink","submodules":[],"kind":"module"},{"name":"Bytelibrarian","submodules":[],"kind":"module"},{"name":"Bytepackager","submodules":[],"kind":"module"},{"name":"Errors","submodules":[],"kind":"module"},{"name":"Compile","submodules":[],"kind":"module"},{"name":"Maindriver","submodules":[],"kind":"module"}]},{"name":"odoc_info","modules":[{"name":"Odoc_config","submodules":[],"kind":"module"},{"name":"Odoc_messages","submodules":[],"kind":"module"},{"name":"Odoc_global","submodules":[],"kind":"module"},{"name":"Odoc_types","submodules":[],"kind":"module"},{"name":"Odoc_misc","submodules":[],"kind":"module"},{"name":"Odoc_text_parser","submodules":[],"kind":"module"},{"name":"Odoc_text_lexer","submodules":[],"kind":"module"},{"name":"Odoc_text","submodules":[{"name":"Texter","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Odoc_name","submodules":[{"name":"Map","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Odoc_parameter","submodules":[],"kind":"module"},{"name":"Odoc_value","submodules":[],"kind":"module"},{"name":"Odoc_type","submodules":[],"kind":"module"},{"name":"Odoc_extension","submodules":[],"kind":"module"},{"name":"Odoc_exception","submodules":[],"kind":"module"},{"name":"Odoc_class","submodules":[],"kind":"module"},{"name":"Odoc_module","submodules":[],"kind":"module"},{"name":"Odoc_print","submodules":[],"kind":"module"},{"name":"Odoc_str","submodules":[],"kind":"module"},{"name":"Odoc_comments_global","submodules":[],"kind":"module"},{"name":"Odoc_parser","submodules":[],"kind":"module"},{"name":"Odoc_lexer","submodules":[],"kind":"module"},{"name":"Odoc_see_lexer","submodules":[],"kind":"module"},{"name":"Odoc_env","submodules":[],"kind":"module"},{"name":"Odoc_merge","submodules":[],"kind":"module"},{"name":"Odoc_sig","submodules":[{"name":"Analyser","submodules":[{"name":"_","submodules":[],"kind":"argument-1"}],"kind":"module"},{"name":"Info_retriever","submodules":[],"kind":"module-type"},{"name":"Signature_search","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Odoc_ast","submodules":[{"name":"Analyser","submodules":[{"name":"_","submodules":[],"kind":"argument-1"}],"kind":"module"},{"name":"Typedtree_search","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Odoc_control","submodules":[],"kind":"module"},{"name":"Odoc_inherit","submodules":[],"kind":"module"},{"name":"Odoc_search","submodules":[{"name":"Search_by_name","submodules":[],"kind":"module"},{"name":"P_name","submodules":[],"kind":"module"},{"name":"Search","submodules":[{"name":"P","submodules":[],"kind":"argument-1"}],"kind":"module"},{"name":"Predicates","submodules":[],"kind":"module-type"}],"kind":"module"},{"name":"Odoc_scan","submodules":[{"name":"scanner","submodules":[],"kind":"class"}],"kind":"module"},{"name":"Odoc_cross","submodules":[],"kind":"module"},{"name":"Odoc_comments","submodules":[{"name":"Basic_info_retriever","submodules":[],"kind":"module"},{"name":"Texter","submodules":[],"kind":"module-type"}],"kind":"module"},{"name":"Odoc_dep","submodules":[{"name":"Dep","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Odoc_analyse","submodules":[],"kind":"module"},{"name":"Odoc_info","submodules":[{"name":"Global","submodules":[],"kind":"module"},{"name":"Dep","submodules":[],"kind":"module"},{"name":"Scan","submodules":[{"name":"scanner","submodules":[],"kind":"class"}],"kind":"module"},{"name":"Search","submodules":[],"kind":"module"},{"name":"Module","submodules":[],"kind":"module"},{"name":"Class","submodules":[],"kind":"module"},{"name":"Value","submodules":[],"kind":"module"},{"name":"Type","submodules":[],"kind":"module"},{"name":"Exception","submodules":[],"kind":"module"},{"name":"Extension","submodules":[],"kind":"module"},{"name":"Parameter","submodules":[],"kind":"module"},{"name":"Name","submodules":[],"kind":"module"}],"kind":"module"}]},{"name":"unix","modules":[{"name":"Unix","submodules":[{"name":"LargeFile","submodules":[],"kind":"module"}],"kind":"module"},{"name":"UnixLabels","submodules":[{"name":"LargeFile","submodules":[],"kind":"module"}],"kind":"module"}]},{"name":"stdlib","modules":[{"name":"CamlinternalFormatBasics","submodules":[],"kind":"module"},{"name":"Stdlib","submodules":[{"name":"Weak","submodules":[{"name":"Make","submodules":[{"name":"H","submodules":[],"kind":"argument-1"}],"kind":"module"},{"name":"S","submodules":[],"kind":"module-type"}],"kind":"module"},{"name":"Unit","submodules":[],"kind":"module"},{"name":"Uchar","submodules":[],"kind":"module"},{"name":"Sys","submodules":[{"name":"Immediate64","submodules":[{"name":"Make","submodules":[{"name":"Non_immediate","submodules":[],"kind":"argument-2"},{"name":"Immediate","submodules":[],"kind":"argument-1"}],"kind":"module"},{"name":"Immediate","submodules":[],"kind":"module-type"},{"name":"Non_immediate","submodules":[],"kind":"module-type"}],"kind":"module"}],"kind":"module"},{"name":"StringLabels","submodules":[],"kind":"module"},{"name":"String","submodules":[],"kind":"module"},{"name":"StdLabels","submodules":[],"kind":"module"},{"name":"Stack","submodules":[],"kind":"module"},{"name":"Set","submodules":[{"name":"Make","submodules":[{"name":"Ord","submodules":[],"kind":"argument-1"}],"kind":"module"},{"name":"S","submodules":[],"kind":"module-type"},{"name":"OrderedType","submodules":[],"kind":"module-type"}],"kind":"module"},{"name":"Seq","submodules":[],"kind":"module"},{"name":"Semaphore","submodules":[{"name":"Binary","submodules":[],"kind":"module"},{"name":"Counting","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Scanf","submodules":[{"name":"Scanning","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Result","submodules":[],"kind":"module"},{"name":"Random","submodules":[{"name":"State","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Queue","submodules":[],"kind":"module"},{"name":"Printf","submodules":[],"kind":"module"},{"name":"Printexc","submodules":[{"name":"Slot","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Parsing","submodules":[],"kind":"module"},{"name":"Out_channel","submodules":[],"kind":"module"},{"name":"Option","submodules":[],"kind":"module"},{"name":"Oo","submodules":[],"kind":"module"},{"name":"Obj","submodules":[{"name":"Ephemeron","submodules":[],"kind":"module"},{"name":"Extension_constructor","submodules":[],"kind":"module"},{"name":"Closure","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Nativeint","submodules":[],"kind":"module"},{"name":"Mutex","submodules":[],"kind":"module"},{"name":"MoreLabels","submodules":[{"name":"Set","submodules":[{"name":"Make","submodules":[{"name":"Ord","submodules":[],"kind":"argument-1"}],"kind":"module"},{"name":"S","submodules":[],"kind":"module-type"},{"name":"OrderedType","submodules":[],"kind":"module-type"}],"kind":"module"},{"name":"Map","submodules":[{"name":"Make","submodules":[{"name":"Ord","submodules":[],"kind":"argument-1"}],"kind":"module"},{"name":"S","submodules":[],"kind":"module-type"},{"name":"OrderedType","submodules":[],"kind":"module-type"}],"kind":"module"},{"name":"Hashtbl","submodules":[{"name":"MakeSeeded","submodules":[{"name":"H","submodules":[],"kind":"argument-1"}],"kind":"module"},{"name":"SeededS","submodules":[],"kind":"module-type"},{"name":"SeededHashedType","submodules":[],"kind":"module-type"},{"name":"Make","submodules":[{"name":"H","submodules":[],"kind":"argument-1"}],"kind":"module"},{"name":"S","submodules":[],"kind":"module-type"},{"name":"HashedType","submodules":[],"kind":"module-type"}],"kind":"module"}],"kind":"module"},{"name":"Marshal","submodules":[],"kind":"module"},{"name":"Map","submodules":[{"name":"Make","submodules":[{"name":"Ord","submodules":[],"kind":"argument-1"}],"kind":"module"},{"name":"S","submodules":[],"kind":"module-type"},{"name":"OrderedType","submodules":[],"kind":"module-type"}],"kind":"module"},{"name":"ListLabels","submodules":[],"kind":"module"},{"name":"List","submodules":[],"kind":"module"},{"name":"Lexing","submodules":[],"kind":"module"},{"name":"Lazy","submodules":[],"kind":"module"},{"name":"Int64","submodules":[],"kind":"module"},{"name":"Int32","submodules":[],"kind":"module"},{"name":"Int","submodules":[],"kind":"module"},{"name":"In_channel","submodules":[],"kind":"module"},{"name":"Hashtbl","submodules":[{"name":"MakeSeeded","submodules":[{"name":"H","submodules":[],"kind":"argument-1"}],"kind":"module"},{"name":"SeededS","submodules":[],"kind":"module-type"},{"name":"SeededHashedType","submodules":[],"kind":"module-type"},{"name":"Make","submodules":[{"name":"H","submodules":[],"kind":"argument-1"}],"kind":"module"},{"name":"S","submodules":[],"kind":"module-type"},{"name":"HashedType","submodules":[],"kind":"module-type"}],"kind":"module"},{"name":"Gc","submodules":[{"name":"Memprof","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Fun","submodules":[],"kind":"module"},{"name":"Format","submodules":[],"kind":"module"},{"name":"Float","submodules":[{"name":"ArrayLabels","submodules":[],"kind":"module"},{"name":"Array","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Filename","submodules":[],"kind":"module"},{"name":"Ephemeron","submodules":[{"name":"Kn","submodules":[{"name":"Bucket","submodules":[],"kind":"module"},{"name":"MakeSeeded","submodules":[{"name":"H","submodules":[],"kind":"argument-1"}],"kind":"module"},{"name":"Make","submodules":[{"name":"H","submodules":[],"kind":"argument-1"}],"kind":"module"}],"kind":"module"},{"name":"K2","submodules":[{"name":"Bucket","submodules":[],"kind":"module"},{"name":"MakeSeeded","submodules":[{"name":"H2","submodules":[],"kind":"argument-2"},{"name":"H1","submodules":[],"kind":"argument-1"}],"kind":"module"},{"name":"Make","submodules":[{"name":"H2","submodules":[],"kind":"argument-2"},{"name":"H1","submodules":[],"kind":"argument-1"}],"kind":"module"}],"kind":"module"},{"name":"K1","submodules":[{"name":"Bucket","submodules":[],"kind":"module"},{"name":"MakeSeeded","submodules":[{"name":"H","submodules":[],"kind":"argument-1"}],"kind":"module"},{"name":"Make","submodules":[{"name":"H","submodules":[],"kind":"argument-1"}],"kind":"module"}],"kind":"module"},{"name":"SeededS","submodules":[],"kind":"module-type"},{"name":"S","submodules":[],"kind":"module-type"}],"kind":"module"},{"name":"Either","submodules":[],"kind":"module"},{"name":"Effect","submodules":[{"name":"Shallow","submodules":[],"kind":"module"},{"name":"Deep","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Domain","submodules":[{"name":"DLS","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Digest","submodules":[],"kind":"module"},{"name":"Condition","submodules":[],"kind":"module"},{"name":"Complex","submodules":[],"kind":"module"},{"name":"Char","submodules":[],"kind":"module"},{"name":"Callback","submodules":[],"kind":"module"},{"name":"BytesLabels","submodules":[],"kind":"module"},{"name":"Bytes","submodules":[],"kind":"module"},{"name":"Buffer","submodules":[],"kind":"module"},{"name":"Bool","submodules":[],"kind":"module"},{"name":"Bigarray","submodules":[{"name":"Array3","submodules":[],"kind":"module"},{"name":"Array2","submodules":[],"kind":"module"},{"name":"Array1","submodules":[],"kind":"module"},{"name":"Array0","submodules":[],"kind":"module"},{"name":"Genarray","submodules":[],"kind":"module"}],"kind":"module"},{"name":"Atomic","submodules":[],"kind":"module"},{"name":"ArrayLabels","submodules":[],"kind":"module"},{"name":"Array","submodules":[],"kind":"module"},{"name":"Arg","submodules":[],"kind":"module"},{"name":"LargeFile","submodules":[],"kind":"module"}],"kind":"module"},{"name":"CamlinternalLazy","submodules":[],"kind":"module"},{"name":"CamlinternalFormat","submodules":[],"kind":"module"},{"name":"CamlinternalOO","submodules":[],"kind":"module"},{"name":"CamlinternalMod","submodules":[],"kind":"module"}]}]}
 
 Generates a status.json file
-  $ cat output/p/ppx_deriving_yaml/0.2.1/status.json
+  $ cat output/p/ocaml-base-compiler/5.0.0/status.json
   "Built"
 
-Generate a README.md file with the tables formatted in HTML
-  $ cat output/p/ppx_deriving_yaml/0.2.1/README.md.html.json
-  {"uses_katex":false,"breadcrumbs":[{"name":"p","href":"../../","kind":"page"},{"name":"ppx_deriving_yaml","href":"../","kind":"page"},{"name":"0.2.1","href":"","kind":"page"},{"name":"README.md","href":"#","kind":"leaf-page"}],"toc":[],"preamble":"<h2>ppx_deriving_yaml</h2>","content":"<p>This ppx is based on <a href=\"https://github.com/NathanReb/ppx_yojson\">ppx_yojson</a> and <a href=\"https://github.com/ocaml-ppx/ppx_deriving_yojson\">ppx_deriving_yojson</a> because of the many similarities between JSON and yaml. In particular many of the way the OCaml values are encoded to yaml types are the same as those implemented by the Yojson ppx.</p><ul><li><p><a href=\"#basic-usage\">Basic Usage</a></p></li><li><p><a href=\"#attributes\">Attributes</a></p><ul><li><p><a href=\"#key-and-name\">Key and Name</a></p></li><li><p><a href=\"#default-values\">Default Values</a></p></li><li><p><a href=\"#custom-encoding-and-decoding\">Custom encoding and decoding</a></p></li></ul></li><li><p><a href=\"#partially-decoding\">Partially Decoding</a></p></li><li><p><a href=\"#implementation-details\">Implementation Details</a></p></li></ul><h3>Basic Usage</h3><p>For converting OCaml values to yaml values <code>ppx_deriving_yaml</code> will do the conventional dropping of the type name if it is <code>t</code>. Otherwise the type name is the prefix to the <code>to_yaml</code> function.</p><p><code>to_yaml</code> produces a <a href=\"https://github.com/avsm/ocaml-yaml/blob/master/lib/types.ml#L44\"><code>Yaml.value</code></a> which is compatible with the <a href=\"https://github.com/mirage/ezjsonm/blob/master/lib/ezjsonm.ml#L18\"><code>Ezjsonm.value</code></a> type.</p><p><code>of_yaml</code> produces OCaml types wrapped in a <code>result</code> -- this is how ocaml-yaml also handles errors i.e. not using exceptions. Based on your type this should let you move between yaml and OCaml values.</p><pre class=\"language-markdown\"><code># #require &quot;ppx_deriving_yaml&quot;;;\u000A</code></pre><p>Here is a small example.</p><pre class=\"language-markdown\"><code>type person = { name : string; age : int } [@@deriving yaml]\u000Atype users = person list [@@deriving yaml]\u000A</code></pre><p>This will produce four functions, a <code>_to_yaml</code> and <code>_of_yaml</code> for both a person and<br/>the users. For example:</p><pre class=\"language-markdown\"><code># person_to_yaml;;\u000A- : person -&gt;\u000A    [&gt; `O of (string * [&gt; `Float of float | `String of string ]) list ]\u000A= &lt;fun&gt;\u000A# users_of_yaml;;\u000A- : [&gt; `A of [&gt; `O of (string * Yaml.value) list ] list ] -&gt;\u000A    (person list, [&gt; `Msg of string ]) result\u000A= &lt;fun&gt;\u000A</code></pre><p>If you make polymorphic types, then you will have to supply the function to convert the unknown to a yaml value. For example:</p><pre class=\"language-markdown\"><code>type 'a note = { txt : 'a } [@@deriving yaml]\u000A</code></pre><p>produces the following function.</p><pre class=\"language-markdown\"><code># note_to_yaml;;\u000A- : ('a -&gt; Yaml.value) -&gt; 'a note -&gt; [&gt; `O of (string * Yaml.value) list ] =\u000A&lt;fun&gt;\u000A</code></pre><p>Finally, if you only need the encoder (<code>to_yaml</code>) or the decoder (<code>of_yaml</code>) then there are single versions of the deriver for those.</p><pre class=\"language-markdown\"><code># type x = { age : int }[@@deriving to_yaml];;\u000Atype x = { age : int; }\u000Aval x_to_yaml : x -&gt; [&gt; `O of (string * [&gt; `Float of float ]) list ] = &lt;fun&gt;\u000A</code></pre><h3>Attributes</h3><h4>Key and Name</h4><p>Record field names cannot begin with a capital letter and variant constructors must start with one. This limits what the generated yaml can look like. To override the yaml names you can use the <code>[@key &lt;string&gt;]</code> and <code>[@name &lt;string&gt;]</code> attributes for records and variants respectively.</p><p>For example:</p><pre class=\"language-markdown\"><code>type t = {\u000A  camel_name : string [@key &quot;camel-name&quot;]\u000A}[@@deriving to_yaml]\u000A</code></pre><p>Will produce Yaml of the form</p><pre class=\"language-markdown\"><code># Yaml.to_string (to_yaml { camel_name = &quot;Alice&quot; });;\u000A- : string Yaml.res = Ok &quot;camel-name: Alice\\n&quot;\u000A</code></pre><h4>Default Values</h4><p>You can also specify default values for fields.</p><pre class=\"language-markdown\"><code>type t = {\u000A  name : string;\u000A  age : int [@default 42]\u000A}[@@deriving yaml]\u000A</code></pre><p>These will be used in the absence of any fields when decoding yaml values into OCaml ones.</p><pre class=\"language-markdown\"><code># Yaml.of_string_exn &quot;name: Alice&quot; |&gt; of_yaml;;\u000A- : (t, [&gt; `Msg of string ]) result = Ok {name = &quot;Alice&quot;; age = 42}\u000A</code></pre><h4>Custom encoding and decoding</h4><p>Sometimes you might want to specify your own encoding and decoding logic on field<br/>by field basis. To do so, you can use the <code>of_yaml</code> and <code>to_yaml</code> attributes.</p><pre class=\"language-markdown\"><code>type t = {\u000A  age : int [@to_yaml fun i -&gt; `Float (float_of_int (i + 1))]\u000A}[@@deriving yaml]\u000A</code></pre><p>The <code>to_yaml</code> function will use the custom encoder now instead.</p><pre class=\"language-markdown\"><code># Yaml.to_string (to_yaml { age = 41 });;\u000A- : string Yaml.res = Ok &quot;age: 42\\n&quot;\u000A</code></pre><h3>Partially Decoding</h3><p>There is a <code>~skip_unknown</code> flag for telling the deriver to simply ignore any fields which are missing. This is particularly useful when you only wish to partially decode a yaml value.</p><p>Consider the following yaml:</p><pre class=\"language-markdown\"><code>let yaml = &quot;name: Bob\\nage: 42\\nmisc: We don't need this!&quot;\u000A</code></pre><p>If we try to do the normal decoding of this but only partially extract the fields, it will throw an error.</p><pre class=\"language-markdown\"><code>type t = {\u000A  name : string;\u000A  age : int;\u000A}[@@deriving yaml]\u000A</code></pre><p>Note that the error is often rather confusing. There is room for improvement (PRs welcome!).</p><pre class=\"language-markdown\"><code># Yaml.of_string_exn yaml |&gt; of_yaml;;\u000A- : (t, [&gt; `Msg of string ]) result =\u000AError (`Msg &quot;miscWe don't need this!\\n&quot;)\u000A</code></pre><p>Instead we tell the deriver to ignore unknown fields.</p><pre class=\"language-markdown\"><code>type t = {\u000A  name : string;\u000A  age : int;\u000A}[@@deriving yaml ~skip_unknown]\u000A</code></pre><pre class=\"language-markdown\"><code># Yaml.of_string_exn yaml |&gt; of_yaml;;\u000A- : (t, [&gt; `Msg of string ]) result = Ok {name = &quot;Bob&quot;; age = 42}\u000A</code></pre><h3>Implementation Details</h3><p>One important thing is that <code>'a option</code> values within records will return <code>None</code> if the Yaml you are trying to convert does not exist.</p><table>\u000A<thead>\u000A<tr>\u000A<th align=\"center\">OCaml Type</th>\u000A<th align=\"center\">Yaml Type</th>\u000A</tr>\u000A</thead>\u000A<tbody>\u000A<tr>\u000A<td align=\"center\"><code>int</code></td>\u000A<td align=\"center\"><code>`Float</code></td>\u000A</tr>\u000A<tr>\u000A<td align=\"center\"><code>float</code></td>\u000A<td align=\"center\"><code>`Float</code></td>\u000A</tr>\u000A<tr>\u000A<td align=\"center\"><code>string</code></td>\u000A<td align=\"center\"><code>`String</code></td>\u000A</tr>\u000A<tr>\u000A<td align=\"center\"><code>bool</code></td>\u000A<td align=\"center\"><code>`Bool</code></td>\u000A</tr>\u000A<tr>\u000A<td align=\"center\"><code>None</code></td>\u000A<td align=\"center\"><code>`Null</code></td>\u000A</tr>\u000A<tr>\u000A<td align=\"center\"><code>list</code></td>\u000A<td align=\"center\"><code> `A []</code></td>\u000A</tr>\u000A<tr>\u000A<td align=\"center\"><code>array</code></td>\u000A<td align=\"center\"><code> `A []</code></td>\u000A</tr>\u000A<tr>\u000A<td align=\"center\"><code>record</code> e.g <code>{ name : string }</code></td>\u000A<td align=\"center\"><code>`O [(&quot;name&quot;, `String s)]</code></td>\u000A</tr>\u000A<tr>\u000A<td align=\"center\"><code>A of int</code> or <code> [`A of int]</code></td>\u000A<td align=\"center\"><code>`O [(&quot;A&quot;, `A [`Float f])]</code></td>\u000A</tr>\u000A</tbody>\u000A</table>\u000A"}
+Generates a index.html file
+  $ cat output/p/ocaml-base-compiler/5.0.0/doc/index.html
+  cat: output/p/ocaml-base-compiler/5.0.0/doc/index.html: No such file or directory
+  [1]
